@@ -1,0 +1,7 @@
+.container-fluid
+  .container-fluid.map-controls
+    button#prev-step.glyphicon.glyphicon-step-backward.pull-left
+    button#play-pause.glyphicon.glyphicon-play
+    button#next-step.glyphicon.glyphicon-step-forward.pull-right
+  h3#location {{ event.name }}
+div(ng-bind-html="event.content")
