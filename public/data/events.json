@@ -1,0 +1,132 @@
+[
+    {
+        "name":"Mulhouse",
+        "extent":{
+            "xmax":22.10275579019296,
+            "xmin":-7.4377817901929575,
+            "ymax":52.494876816720264,
+            "ymin":43.008703183279735,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/mulhouse.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Glasgow",
+        "extent":{
+            "xmax":10.511837381832803,
+            "xmin":-19.028700198553096,
+            "ymax":60.60259084405147,
+            "ymin":51.11641721061094,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/glasgow.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Paris",
+        "extent":{
+            "xmax":17.10769248633442,
+            "xmin":-12.432845094051478,
+            "ymax":53.60653778938908,
+            "ymin":44.12036415594855,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/paris.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"New York City",
+        "extent":{
+            "xmax":-73.97791881876913,
+            "xmin":-74.03561518123084,
+            "ymax":40.71905584143891,
+            "ymin":40.70052815856109,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/nyc.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Providence",
+        "extent":{
+            "xmax":-67.72130356973479,
+            "xmin":-75.10643796483127,
+            "ymax":43.00870318327974,
+            "ymin":40.6371597749196,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/providence.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Boston",
+        "extent":{
+            "xmax":-71.0290015797532,
+            "xmin":-71.0866979422149,
+            "ymax":42.3683690933198,
+            "ymin":42.34984141044199,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/boston.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"San Francisco",
+        "extent":{
+            "xmax":-118.72642780245174,
+            "xmin":-126.11156219754825,
+            "ymax":38.98579070418007,
+            "ymin":36.61424729581993,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/sf.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Santiago",
+        "extent":{
+            "xmax":-41.107503419613934,
+            "xmin":-100.18857858038608,
+            "ymax":-23.984225366559414,
+            "ymin":-42.95657263344059,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/santiago.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Valdivia",
+        "extent":{
+            "xmax":-43.67601541961393,
+            "xmin":-102.75709058038608,
+            "ymax":-30.305481366559412,
+            "ymin":-49.277828633440585,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/valdivia.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    },
+    {
+        "name":"Virginia City",
+        "extent":{
+            "xmax":-90.1093374196139,
+            "xmin":-149.1904125803861,
+            "ymax":48.795571633440595,
+            "ymin":29.82322436655941,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/virginia_city.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+    }
+]

@@ -4,8 +4,6 @@
  *
  */
 
-var app = angular.module('pureFood', ['ngSanitize']);
-
 (function (require, angular, app) {
     'use strict';
 
@@ -70,7 +68,6 @@ var app = angular.module('pureFood', ['ngSanitize']);
 		app.controller('StoryMapController',
 			       ['$rootScope', '$scope', '$attrs', '$sce', 'storyEvents',
 				function StoryMapController($rootScope, $scope, $attrs, $sce, storyEvents) {
-			
 			var self = this; // Reference to 'this' to use in functions
 			var mapDiv = [];
 			var layers = [];
@@ -104,7 +101,6 @@ var app = angular.module('pureFood', ['ngSanitize']);
 			//self.events = $attrs.events ? $attrs.events: { attrs: $attrs.events.attrs ? $attrs.events.attrs : [] };
 			//self.events = $scope.events;
 
-			
 			this.step = function(event) {
 			    var feature = self.events[self.currentStep];
 			    var coords = feature.extent;
@@ -174,7 +170,6 @@ var app = angular.module('pureFood', ['ngSanitize']);
 			};
 
 			this.layersAddResult = function() {
-				
 				var feature = self.events[self.currentStep];
 				var coords = feature.extent;
 
@@ -198,11 +193,21 @@ var app = angular.module('pureFood', ['ngSanitize']);
 					});
 				}
 			};
+			//$scope.layersAddResult = this.layersAddResult;
+
+			this.defaultExtent = new Extent({
+				xmin: -295.10893287781346,
+				xmax: 295.1089328778138,
+				ymin: -49.658833917872954,
+				ymax: 140.06463875093743,
+				spatialReference: { wkid: 4326 }
+			    });
 			
 			this.createMap = function () {
 			    var options = {
 				zoom: $attrs.zoom ? parseInt($attrs.zoom) : 1,
-				logo: false
+				logo: false,
+				extent: this.defaultExtent
 			    };
 
 			    // 				basemap: $attrs.basemap ? $attrs.basemap : null,
@@ -232,19 +237,31 @@ var app = angular.module('pureFood', ['ngSanitize']);
 			    }
 			};
 
-			// Can this introduce a race condition, or is this handled by Promises?
+			// This introduces a race condition
+			// @todo Refactor
 			storyEvents.then(function(promise) {
-				self.events = promise.data;
-
-				var initialZoom = 0.1;
-
-				self.currentStep = 0;
-				var feature = self.events[self.currentStep];
-				var coords = feature.extent;
+				console.log('trace2');
 
 				// @todo Refactor
-				feature.content = $sce.trustAsHtml(feature.template);
-				$scope.event = feature;
+				if(self.hasOwnProperty('map')) {
+				    self.events = promise.data;
+
+				    var initialZoom = 0.1;
+
+				    self.currentStep = 0;
+				    var feature = self.events[self.currentStep];
+				    var coords = feature.extent;
+
+				    // @todo Refactor
+				    feature.content = $sce.trustAsHtml(feature.template);
+				    $scope.event = feature;
+
+				    if(self.map.extent == self.defaultExtent) {
+					if(JSON.stringify(self.map.extent) == JSON.stringify(self.defaultExtent)) {
+					    self.layersAddResult();
+					}
+				    }
+				}
 			    });
 		}]);
 
