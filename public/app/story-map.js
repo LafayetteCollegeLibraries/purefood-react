@@ -4,7 +4,147 @@
  *
  */
 
-var app = angular.module('pureFood.storyMap', ['ngSanitize']);
+var app = angular.module('purefood', ['ngSanitize', 'angular-drupal', 'ngRoute', 'ui.router']);
+
+/**
+ * Configuration for the routes
+ *
+ */
+app.config(['$provide', '$routeProvider', '$stateProvider', '$urlRouterProvider', function($provide, $routeProvider, $stateProvider, $urlRouterProvider) {
+	    $provide.
+	      value('drupalSettings', {
+	        sitePath: 'http://purefood.exhibits.stage.lafayette.edu/admin',
+		endpoint: 'api'
+	      });
+	    /*
+	    $routeProvider.
+	      when('/paraf', {
+	        templateUrl: 'app/partials/paraf.html'
+	      }).
+	      when('/margarine-legislation', {
+		      templateUrl: 'app/partials/margarine_legislation.html'
+	      }).
+	      when('/margarine-production', {
+		      templateUrl: 'app/partials/margarine_production.html'
+	      }).
+	      when('/margarine-exports', {
+		      templateUrl: 'app/partials/margarine_exports.html'
+	      }).
+	      when('/cottonseed-production', {
+		      templateUrl: 'app/partials/cottonseed_production.html'
+	      }).
+	      when('/cottonseed-exports', {
+		      templateUrl: 'app/partials/cottonseed_exports.html'
+	      }).
+	      when('/glucose-production', {
+		      templateUrl: 'app/partials/glucose_production.html'
+	      }).
+	      when('/glucose-exports', {
+		      templateUrl: 'app/partials/glucose_exports.html'
+	      }).
+	      when('/notes', {
+		      templateUrl: 'app/partials/notes.html'
+	      }).
+	      otherwise({
+		templateUrl: 'app/partials/chapters.html',
+		controller: 'ChaptersCtrl'
+	      });
+	    */
+	    /*
+	    $routeProvider.
+	      otherwise({
+		      templateUrl: 'app/partials/chapters.html',
+		      controller: 'ChaptersCtrl'
+	    });
+	    */
+	    $urlRouterProvider.otherwise('/chapters');
+
+	    $stateProvider.
+	      state('/paraf', {
+	       url: '/paraf',
+	       templateUrl: 'app/partials/paraf.html'
+	      }).
+	      state('/paraf.event.content', {
+	       url: '/paraf-event-content',
+	       templateUrl: 'app/partials/paraf.event.content.html'
+	      }).
+	      state('/margarine-legislation', {
+	       url: '/margarine-legislation',
+		      templateUrl: 'app/partials/margarine_legislation.html'
+	      }).
+	      state('/margarine-production', {
+	       url: '/margarine-production',
+		      templateUrl: 'app/partials/margarine_production.html'
+	      }).
+	      state('/margarine-exports', {
+	       url: '/margarine-exports',
+		      templateUrl: 'app/partials/margarine_exports.html'
+	      }).
+	      state('/cottonseed-production', {
+	       url: '/cottonseed-production',
+		      templateUrl: 'app/partials/cottonseed_production.html'
+	      }).
+	      state('/cottonseed-exports', {
+	       url: '/cottonseed-exports',
+		      templateUrl: 'app/partials/cottonseed_exports.html'
+	      }).
+	      state('/glucose-production', {
+	       url: '/glucose-production',
+		      templateUrl: 'app/partials/glucose_production.html'
+	      }).
+	      state('/glucose-exports', {
+	       url: '/glucose-exports',
+		      templateUrl: 'app/partials/glucose_exports.html'
+	      }).
+	      state('/notes', {
+	       url: '/notes',
+		      templateUrl: 'app/partials/notes.html'
+	      }).
+	      state('/chapters', {
+	       url: '/chapters',
+			  templateUrl: 'app/partials/chapters.html',
+			  controller: 'ChaptersCtrl'
+	      });
+	}]);
+
+/**
+ * The controller for the lightbox
+ *
+ */
+
+
+/**
+ * The controller for the landing page
+ *
+ */
+app.controller('ChaptersCtrl', ['$scope', '$http', function($scope, $http) {
+	    $http.get('data/chapters.json').success(function(data) {
+		    $scope.chapters = data;
+		});
+	}]);
+
+/**
+ * Controller for the Drupal authentication
+ *
+ */
+app.controller('UserLoginCtrl', ['$scope', 'drupal', function($scope, drupal) {
+
+	    /*
+	    $scope.submit = function(user) {
+
+		drupal.user_login(user.name, user.pass).then(function(data) {
+			
+			alert('Hello ' + data.user.name + '!');
+		    });
+	    };
+	    */
+	    $scope.submit = function() {
+
+		drupal.node_load(1).then(function(node) {
+			alert(node.title);
+		    });
+	    };
+	}]);
 
 /**
  * For Events in the Story Map
@@ -55,10 +195,11 @@ app.directive('storyEvent', function($compile) {
 (function (require, angular, app) {
     'use strict';
 
-    require(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/ArcGISTiledMapServiceLayer",
+
+    require(["esri/map", "esri/dijit/HomeButton", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/ArcGISTiledMapServiceLayer",
 	     "esri/TimeExtent", "esri/dijit/TimeSlider", "esri/config", "esri/geometry/Point", "esri/geometry/Extent",
 	     "esri/tasks/query", "esri/tasks/QueryTask",
-	     "dojo/_base/array", "dojo/dom", "dojo/html", "dojo/domReady!"], function(Map, ArcGISDynamicMapServiceLayer, Tiled,
+	     "dojo/_base/array", "dojo/dom", "dojo/html", "dojo/domReady!"], function(Map, HomeButton, ArcGISDynamicMapServiceLayer, Tiled,
 										      TimeExtent, TimeSlider, esriConfig, Point, Extent,
 										      Query, QueryTask,
 										      arrayUtils, dom, html) {
@@ -69,17 +210,18 @@ app.directive('storyEvent', function($compile) {
 		 *
 		 */
 		app.controller('StoryMapController',
-			       ['$rootScope', '$scope', '$attrs', '$sce', 'storyEvents',
-				function StoryMapController($rootScope, $scope, $attrs, $sce, storyEvents) {
+			       ['$rootScope', '$scope', '$attrs', '$sce', '$timeout', 'storyEvents',
+				function StoryMapController($rootScope, $scope, $attrs, $sce, $timeout, storyEvents) {
 			var self = this; // Reference to 'this' to use in functions
 			var mapDiv = [];
 			var layers = [];
 
 			// @todo Resolve
 			$scope.event = { name: 'Loading...', content: '' };
- 
+
 			this.init = function (element) {
 			    if (!$attrs.id) { throw new Error('\'id\' is required for a map.'); }
+
 			    self.$element = element;
 			    self.createDiv();
 			    self.createMap();
@@ -101,27 +243,51 @@ app.directive('storyEvent', function($compile) {
 			 * Structuring the data for the events (data in relation to the geospatial features)
 			 *
 			 */
-			//self.events = $attrs.events ? $attrs.events: { attrs: $attrs.events.attrs ? $attrs.events.attrs : [] };
-			//self.events = $scope.events;
-
 			this.step = function(event) {
+
+			    if( self.currentStep > 0) {
+				var previousFeature = self.events[self.currentStep - 1];
+
+				// Activate the stylized map layer
+				self.map.getLayer( previousFeature.layerId ).hide();
+			    }
+
 			    var feature = self.events[self.currentStep];
 			    var coords = feature.extent;
 
 			    // @todo Refactor
 			    feature.content = $sce.trustAsHtml(feature.template);
-			    $scope.$apply(function() { $scope.event = feature; });
+
+			    // Integrate the jQuery fancyboxes once the markup has been loaded
+			    // This should be listening for some event to be propagated, but no time to implement this
+			    $timeout(function() {
+				    $scope.event = feature;
+				    $('.fancy').fancybox();
+				});
+
 
 			    // @todo Abstract
 			    if(coords.constructor == Object) {
 				self.map.setExtent( new Extent(coords) );
 			    } else {
+				// This has been disabled in compliance with FOOD-75
+				/*
 				if( typeof(feature.zoom) === 'number' ) {
 				    self.map.centerAndZoom(new Point( coords ),  feature.zoom);
 				} else {
 				    self.map.centerAt(coords);
 				}
+				*/
+				self.map.centerAt(coords);
 			    }
+
+			    // Create another fancybox for when users land on a given event
+			    // This is an anti-pattern for Angular, as the Controller shouldn't be manipulating the DOM
+			    // It's probably best to implement this as a separate Directive
+			    $.fancybox.open( feature.image );
+
+			    // Activate the stylized map layer
+			    self.map.getLayer( feature.layerId ).show();
 			};
 
 			this.nextStep = function(event) {
@@ -172,9 +338,19 @@ app.directive('storyEvent', function($compile) {
 			    }
 			};
 
+			/**
+			 * Handler for initially adding the layer results
+			 * There is much duplication of functionality between this and self.step()
+			 * @todo Rafactor
+			 *
+			 */
 			this.layersAddResult = function() {
-				var feature = self.events[self.currentStep];
-				var coords = feature.extent;
+
+			    // Work-around is necessary for styling
+			    $('#map-home').appendTo('#map_root').show();
+
+			    var feature = self.events[self.currentStep];
+			    var coords = feature.extent;
 
 				if(coords.constructor == Object) {
 				    self.map.setExtent( new Extent(coords) ).then(function() {
@@ -182,10 +358,22 @@ app.directive('storyEvent', function($compile) {
 					    // @todo Refactor
 					    feature.content = $sce.trustAsHtml(feature.template);
 					    $scope.event = feature;
+					    
+					    // Integration for the jQuery fancybox
+					    // This delay is necessary, as there does not appear to be an immediately available Promise or event which can be used
+					    // @todo Refactor
+					    $timeout(function() {
+						    $('.fancy').fancybox();
+						});
 
 					    dojo.query('#next-step').onclick(self.nextStep);
 					    dojo.query('#prev-step').onclick(self.prevStep);
 					    dojo.query('#play-pause').onclick(self.updateState);
+
+					    $.fancybox.open( feature.image );
+
+					    // Activate the stylized map layer
+					    self.map.getLayer( feature.layerId ).show();
 					});
 				} else {
 				    self.map.centerAndZoom(new Point( coords ), initialZoom).then(function() {
@@ -213,15 +401,40 @@ app.directive('storyEvent', function($compile) {
 				extent: this.defaultExtent
 			    };
 
-			    // 				basemap: $attrs.basemap ? $attrs.basemap : null,
+			    // Dojo indexes widgets using the @id attribute of each element
+			    // Hence, the element must have its widgets destroyed upon loading
+			    // Please see https://bugs.dojotoolkit.org/ticket/5438
+			    dijit.registry.forEach(function(w) {
+				    if(w.id == 'map-home') {
+					w.destroyRecursive();
+				    }
+				});
 			    
 			    self.map = new Map($attrs.id, options);
-			    self.map.on("layers-add-result", self.layersAddResult);
+			    self.map.on('load', function (map) {
+
+				    // This can fail if the Map itself isn't initialized
+				    // The Esri API doesn't give me a Promise, or an event ("load" or "layers-add-result" still triggers the failure)
+				    // Further, no consistent $timeout delay could be identified which suffices across browsers
+				    // For the moment, this will have to suffice
+				    while( $('#map_zoom_slider').length < 0 ) {
+					// no-op
+				    };
+
+				    self.homeButton = new HomeButton({
+					    map: self.map
+					}, "map-home");
+				    self.homeButton.startup();
+				});
+
+			    self.map.on("layers-add-result", self.layersAddResult );
 
 			    // Work-around
 			    self.map.addLayers(layers);
 
 			    $scope.map = self.map;
+
+			    // This triggers errors which relate to the Dojo/AngularJS integration
 			    /*
 			    $scope.map.on('load', function () { $rootScope.$broadcast('map-load'); });
 			    $scope.map.on('click', function (e) { $rootScope.$broadcast('map-click', e); });
@@ -270,7 +483,7 @@ app.directive('storyEvent', function($compile) {
 			return {
 			    restrict: 'EA',
 				controller: 'StoryMapController',
-				link: function (scope, element, attrs, ctrl) {
+				link: function ($scope, element, attrs, ctrl) {
 				    ctrl.init(element);
 			    }
 			};
@@ -283,11 +496,15 @@ app.directive('storyEvent', function($compile) {
 		 */
 		app.controller('StoryLayerController', ['$scope', '$attrs', function ($scope, $attrs) {
 			    this.init = function() {
-				//if (!$attrs.id) { throw new Error('\'id\' is required for a story layer.'); }
 				if (!$attrs.url) { throw new Error('\'url\' is required for a story layer.'); }
-				//var layer = new ArcGISDynamicMapServiceLayer($attrs.url, { id: $attrs.id });
-				var layer = new ArcGISDynamicMapServiceLayer($attrs.url);
-				$scope.addLayer(layer);
+
+				if(!$attrs.layerid) {
+				    var layer = new ArcGISDynamicMapServiceLayer($attrs.url);
+				    $scope.addLayer(layer);
+				} else {
+				    var layer = new ArcGISDynamicMapServiceLayer($attrs.url, { "id": $attrs.layerid, "visible": false });
+				    $scope.addLayer(layer);
+				}
 			    };
     			}]);
 
@@ -303,7 +520,8 @@ app.directive('storyEvent', function($compile) {
 			};
 		    });
 
+
 		// Bootstrap the application
-		angular.bootstrap(document, ['pureFood.storyMap']);
+		angular.bootstrap(document, ['purefood']);
 	    });
 }(window.require, window.angular, window.app));

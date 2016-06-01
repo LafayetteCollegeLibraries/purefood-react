@@ -9,7 +9,8 @@ exports.config = {
     'browserName': 'phantomjs'
   },
 
-  baseUrl: 'http://139.147.4.143:8001/',
+  //baseUrl: 'http://139.147.4.143:8001/',
+  baseUrl: 'http://localhost:8001/',
 
   framework: 'jasmine',
 

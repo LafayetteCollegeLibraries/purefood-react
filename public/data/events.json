@@ -10,7 +10,9 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/mulhouse.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><a class=\"fancy\" href=\"img/mulhouse.jpg\"><img class=\"img-responsive img-thumbnail img-lightbox\" width=\"224px\" alt=\"location thumbnail\" src=\"img/mulhouse.jpg\"></a></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1844</h4><p>Alfred Paraf was born June 10, 1844 in Mulhouse, a manufacturing hub near the Rhine in the Alsace region. It had been an independent state, became a German state, and is now part of France. Paraf’s family was a mainstay in the city, leading manufacturing efforts in the dye industry. His father was an “extensive calico printing works” owner.</p></div>",
+	"image": { "href": "img/mulhouse.jpg", "title": "Mulhouse" },
+	"layerId": "mulhouse"
     },
     {
         "name":"Glasgow",
@@ -23,7 +25,9 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/glasgow.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><a class=\"fancy\" href=\"img/glasgow.jpg\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/glasgow.jpg\"></a></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1863</h4><p>Paraf studied chemistry in Paris and then headed to Glasgow in the early 1860s with money from his father. While there, he used the funds and his chemical training to devise and sell a new calico dye from a fragrant plant called weld (<i>reseda lutea</i>). The dye didn’t have staying power, but investors didn’t know this until Paraf was already on his way back to France.</p></div>",
+	"image": { "href": "img/glasgow.jpg", "title": "Glasgow" },
+	"layerId": "glasgow"
     },
     {
         "name":"Paris",
@@ -36,7 +40,9 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/paris.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/paris.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1864</h4><p>After the Glasgow side trip, Paraf returned to Paris where his uncle was a partner in Paraf, Javal, & Co. He sold a “new color” to his uncle for $10,000 deal and used the money to ship out to the United States. Apparently the dye was a legitimate product, but the younger Paraf had stolen the patent from a friend and claimed it as his own.</p></div>",
+	"image": { "href": "img/paris.jpg", "title": "Paris" },
+	"layerId": "paris"
     },
     {
         "name":"New York City",
@@ -49,7 +55,39 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/nyc.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/nyc.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1867</h4><p>Reports differ, but the spry 22 year old headed to New York in late 1866 or early 1867 (his Obit says he left Europe in 1867). Upon arrival he met with Messrs. F. Bredt and Co., dealers in chemistry and textile coloring dyes and sought an introduction to Prof. Charles Chandler of Columbia University. He stayed for a time in current-day Midtown.</p></div>",
+	"image": { "href": "img/nyc.jpg", "title": "New York City" },
+	"layerId": "nyc"
+    },
+    {
+        "name":"Boston",
+        "extent":{
+            "xmax":-71.04342567036862,
+            "xmin":-71.07227385159948,
+            "ymax":42.37010813387597,
+            "ymin":42.348102369885815,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/boston.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1868</h4><p>He travelled to New England known as a French chemist specializing in plant and animal chemistry, selling licenses for $2000 to $3000 for his dyes. He worked for a time in Boston, seeking more investors in the textile industry for his dyes. Scientific American reported on Paraf, “of Boston, Mass.” when he filed a patent for “separating coloring matter from madder and other plants.”  The purpose was to “liberate the coloring matter of the madder root…from the ligneous matter” so the root’s coloring matter could be used in textile dye processing.</p></div>",
+	"image": { "href": "img/boston.jpg", "title": "Boston" },
+	"layerId": "boston"
+    },
+    {
+        "name":"New York City",
+        "extent":{
+            "xmax":-73.97791881876913,
+            "xmin":-74.03561518123084,
+            "ymax":40.71905584143891,
+            "ymin":40.70052815856109,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/nyc.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1868</h4><p>Paraf was living for a time with a woman he referred to as his wife, Marian Woodbury, before spending down his money through extravagant expenses that included dinner parties at Delmonico’s and carriage services all over the city. He lived at Everett House during this time, at Union Square on 14th St.</p></div>",
+	"image": { "href": "img/nyc.jpg", "title": "New York City" },
+	"layerId": "nyc"
     },
     {
         "name":"Providence",
@@ -62,59 +100,84 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/providence.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/providence.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1869</h4><p>After this initial tour, he met the former Rhode Island Governor Sprague in New York and subsequently entered into business with him in Providence. He received $75,000 after doing a demonstration experiment to show Sprague the value of his calico dyes, apparently to Sprague’s satisfaction.</p></div>",
+	"image": { "href": "img/providence.jpg", "title": "Providence" },
+	"layerId": "providence"
     },
     {
-        "name":"Boston",
+        "name":"New York City",
         "extent":{
-            "xmax":-71.0290015797532,
-            "xmin":-71.0866979422149,
-            "ymax":42.3683690933198,
-            "ymin":42.34984141044199,
+            "xmax":-73.97791881876913,
+            "xmin":-74.03561518123084,
+            "ymax":40.71905584143891,
+            "ymin":40.70052815856109,
             "spatialReference":{
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/boston.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/nyc.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1869</h4><p>He set up a business office at No. 42 Broad Street in lower Manhattan after his return from New England.</p></div>",
+	"image": { "href": "img/nyc.jpg", "title": "New York City" },
+	"layerId": "nyc"
+    },
+    {
+        "name":"Providence",
+        "extent":{
+            "xmax":-67.72130356973479,
+            "xmin":-75.10643796483127,
+            "ymax":43.00870318327974,
+            "ymin":40.6371597749196,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/providence.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1869-1870</h4><p>He lived and worked in Providence for almost a year, setting up the new calico works. By the time it was ready for operations, Sprague found out that Paraf’s process would not work to scale. Paraf then left to return to NYC.</p></div>",
+	"image": { "href": "img/providence.jpg", "title": "Providence" },
+	"layerId": "providence"
+    },
+    {
+        "name":"New York City",
+        "extent":{
+            "xmax":-73.97791881876913,
+            "xmin":-74.03561518123084,
+            "ymax":40.71905584143891,
+            "ymin":40.70052815856109,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/nyc.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1870-73</h4><p>He lived at 25th St. and 5th Avenue at the future home of the New York Club during this fourth stay in New York. While somehow escaping the legal wrath of Sprague, it was during this time that he met, courted and wed Leila Smith, the daughter of a high profile New York lawyer, C. Bainbridge Smith.</p><p>Paraf had at some point traveled back to Paris before returning once again to New York. The historical record is not clear on those passages but we do know that in Spring 1872 he brought the Mege Oleomargarine patent to the city, claiming it as his own. At this time, he culled investors to start the Oleomargarine Company.  It was later renamed the United State Dairy Company when investors learned Paraf had pilfered the patent from Mege-Mouries.</p><p>During this period, he moved farther uptown to live at 49th St. and 5th Ave.</p></div>",
+	"image": { "href": "img/nyc.jpg", "title": "New York City" },
+	"layerId": "nyc"
+    },
+    {
+        "name":"Chicago",
+        "extent":{
+            "xmax":-72.85409020979714,
+            "xmin":-102.39462779020286,
+            "ymax":47.940716684846244,
+            "ymin":35.83703931515375,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/chicago.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1873</h4><p>Reports from Chicago indicate that Paraf stopped in the city on his train route out West.</p></div>",
+	"image": { "href": "img/chicago.jpg", "title": "Chicago" },
+	"layerId": "chicago"
     },
     {
         "name":"San Francisco",
         "extent":{
-            "xmax":-118.72642780245174,
-            "xmin":-126.11156219754825,
-            "ymax":38.98579070418007,
-            "ymin":36.61424729581993,
+            "xmax":-122.40457090938456,
+            "xmin":-122.43341909061543,
+            "ymax":37.81102188199508,
+            "ymin":37.789016118004916,
             "spatialReference":{
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/sf.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
-    },
-    {
-        "name":"Santiago",
-        "extent":{
-            "xmax":-41.107503419613934,
-            "xmin":-100.18857858038608,
-            "ymax":-23.984225366559414,
-            "ymin":-42.95657263344059,
-            "spatialReference":{
-                "wkid":4326
-            }
-        },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/santiago.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
-    },
-    {
-        "name":"Valdivia",
-        "extent":{
-            "xmax":-43.67601541961393,
-            "xmin":-102.75709058038608,
-            "ymax":-30.305481366559412,
-            "ymin":-49.277828633440585,
-            "spatialReference":{
-                "wkid":4326
-            }
-        },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/valdivia.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/sf.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1873</h4><p>Ostensibly at the invitation of capitalists in California, he helped build the new California Oleomargarine Company in San Francisco. On 23 October 1873 he gave a public display of the process at San Francisco’s Placard Exchange (615 Merchant St.).</p><p>The next summer, he was arrested on August 4, 1874 with an associate “under an indictment for forgery.”</p></div>",
+	"image": { "href": "img/sf.jpg", "title": "San Francisco" },
+	"layerId": "sanFrancisco"
     },
     {
         "name":"Virginia City",
@@ -127,6 +190,53 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/virginia_city.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">Event</h4><p>Duis laoreet est ac pellentesque dapibus. Integer maximus sem vel pellentesque consectetur. Fusce tristique suscipit est ac venenatis. Pellentesque efficitur placerat nisl, eget pulvinar felis tempus non. S\\\nuspendisse lacinia cursus magna, a varius risus venenatis nec. Fusce tincidunt nunc lectus, vitae maximus orci fermentum aliquam. Integer scelerisque mi ut ante ullamcorper porttitor. Pellentesque vel mi semper, laoreet dui ut, commodo\\\n libero. Suspendisse dui ligula, facilisis quis sem a, luctus ullamcorper tellus.</p></div>"
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/virginia_city.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">September 1875</h4><p>Paraf travelled to Nevada as an investor in the Nevada Ore Extracting Co. He would buy 175 shares of stock.</p></div>",
+	"image": { "href": "img/virginia_city.jpg", "title": "Virginia City" },
+	"layerId": "virginiaCity"
+    },
+    {
+        "name":"San Francisco",
+        "extent":{
+            "xmax":-122.40457090938456,
+            "xmin":-122.43341909061543,
+            "ymax":37.81102188199508,
+            "ymin":37.789016118004916,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/sf.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1876</h4><p>In February 1876, the “Oleaginous Paraf” left town for “more congenial climes,” according to the <i>San Francisco Daily Morning Call</i>.</p></div>",
+	"image": { "href": "img/sf.jpg", "title": "San Francisco" },
+	"layerId": "sanFrancisco"
+    },
+    {
+        "name":"Santiago",
+        "extent":{
+            "xmax":-41.107503419613934,
+            "xmin":-100.18857858038608,
+            "ymax":-23.984225366559414,
+            "ymin":-42.95657263344059,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/santiago.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">May 1877</h4><p>He was arrested on arrival in Santiago, but kept up appearances and business ventures all the while. On May 16, 1877, he formed the Paraf Smelting Works in Santiago while living at the Des Hotel Ingles.</p><h4>1879</h4><p>In October of 1879, he was convicted in court, guilty of violating Articles 167 and 468 of the Chilean Penal Code.</p></div>",
+	"image": { "href": "img/santiago.jpg", "title": "Santiago" },
+	"layerId": "santiago"
+    },
+    {
+        "name":"Valdivia",
+        "extent":{
+            "xmax":-43.67601541961393,
+            "xmin":-102.75709058038608,
+            "ymax":-30.305481366559412,
+            "ymin":-49.277828633440585,
+            "spatialReference":{
+                "wkid":4326
+            }
+        },
+        "template":"<div id=\"location-image\" class=\"container-fluid\"><img class=\"img-responsive img-thumbnail\" width=\"224px\" alt=\"location thumbnail\" src=\"img/valdivia.jpg\"></div><div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1879-1885</h4><p>Although he received a five-year sentence for violating laws of public trust, forgery and falsification, he remained incarcerated for six until his death of pneumonia in 1885.</p></div>",
+	"image": { "href": "img/valdivia.jpg", "title": "Valdivia" },
+	"layerId": "valdivia"
     }
 ]

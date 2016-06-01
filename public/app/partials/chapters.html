@@ -1,0 +1,34 @@
+<section id="title">
+  <div class="container-fluid">
+    <ul class="pull-left breadcrumb">
+      <li>
+	<a href="/">Home</a>
+      </li>
+    </ul>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation" id="contact">
+	<a href="/#/contact">Contact Us</a>
+      </li>
+      <li role="presentation" id="copyright">
+	<a href="/#/copyright">Copyright</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="content">
+
+<article ng-repeat="chapter in chapters">
+  <h2 ng-bind-html="chapter.title"></h2>
+  <div class="container-fluid">
+    <div class="media">
+      <div class="media-left">
+	<img class="media-object" width="128px" src="{{ chapter.thumbnail }}"/>
+      </div>
+      <div class="media-body">
+	<p ng-bind-html="chapter.content"></p>
+      </div>
+    </div>
+  </div>
+</article>
+</section>

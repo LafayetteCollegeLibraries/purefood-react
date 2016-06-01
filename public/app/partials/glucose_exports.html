@@ -1,0 +1,63 @@
+<div class="container-fluid row">
+  <div class="col-xs-12">
+    <article>
+      <div class="container-fluid">
+	<div id="map-images">
+	  <div id="map-home"></div>
+
+	  <ul class="nav nav-tabs" role="tablist" id="map-tabs">
+	    <li role="presentation" class="active"><a href="#cse-1880" aria-controls="cse-1880" role="tab" data-toggle="tab">1880</a></li>
+	    <li role="presentation"><a href="#cse-1890" aria-controls="cse-1890" role="tab" data-toggle="tab">1890</a></li>
+	    <li role="presentation"><a href="#cse-1900" aria-controls="cse-1900" role="tab" data-toggle="tab">1900</a></li>
+	  </ul>
+
+	  <div class="tab-content" id="map-tab-panes">
+	    <div role="tabpanel" class="tab-pane map-tab-pane active" id="cse-1880">
+	      <h3>1880</h3>
+	      <div id="osd-viewer" style="width: 100%; height: 640px;"></div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="cse-1890">
+	      <h3>1890</h3>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="cse-1900">
+	      <h3>1900</h3>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div class="container-fluid row">
+
+  <div class="col-xs-7">
+    <div class="container-fluid">
+      
+      <h3>Time Slider</h3>
+      <div class="">
+	<button id="backward" class="glyphicon glyphicon-backward btn btn-default" type="button"></button>
+	<button id="play-pause" class="glyphicon glyphicon-play btn btn-default" type="button"></button>
+	<button id="forward" class="glyphicon glyphicon-forward btn btn-default" type="button"></button>
+      </div>
+      <div class="">
+	<input type="text" class="" value="" id="input-time-slider" />
+      </div>
+      <div class="time-slider-esri"></div>
+    </div>
+
+    <div class="container-fluid">
+      <article>
+	<div class="container-fluid">
+	  <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</p>
+	</div>
+      </article>
+    </div>
+  </div>
+  <div class="col-xs-5">
+    <h3>Map Legend</h3>
+    <img src="img/placeholder.png"/>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/glucose-exports.js"></script>

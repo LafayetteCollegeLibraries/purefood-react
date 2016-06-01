@@ -98,10 +98,12 @@
 			 * Structuring the data for the events (data in relation to the geospatial features)
 			 *
 			 */
-			//self.events = $attrs.events ? $attrs.events: { attrs: $attrs.events.attrs ? $attrs.events.attrs : [] };
-			//self.events = $scope.events;
 
-			this.step = function(event) {
+			/**
+			 * Sets the next step on the map visualization interface
+			 *
+			 */
+			this.step = function() {
 			    var feature = self.events[self.currentStep];
 			    var coords = feature.extent;
 
@@ -109,6 +111,7 @@
 			    feature.content = $sce.trustAsHtml(feature.template);
 			    $scope.$apply(function() { $scope.event = feature; });
 
+			    // Set the new extent for the step
 			    // @todo Abstract
 			    if(coords.constructor == Object) {
 				self.map.setExtent( new Extent(coords) );
@@ -119,8 +122,15 @@
 				    self.map.centerAt(coords);
 				}
 			    }
+
+			    // Create the lightbox
+			    
 			};
 
+			/**
+			 * Increments the step for the map
+			 *
+			 */
 			this.nextStep = function(event) {
 			    if(self.currentStep == self.events.length - 1) {
 				self.currentStep = 0;
@@ -131,6 +141,10 @@
 			    return self.step();
 			};
 
+			/**
+			 * Decrements the step for the map
+			 *
+			 */
 			this.prevStep = function() {
 			    if(self.currentStep == 0) {
 				self.currentStep = self.events.length - 1 ;

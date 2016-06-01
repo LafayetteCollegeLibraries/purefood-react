@@ -1,14 +1,48 @@
 /* app css stylesheet */
 
+/**
+ * Bootstrap work-around
+ *
+ */
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media > .pull-left {
+    padding-right: 10px;
+}
+
+html, body {
+    /* font-family: 'Alegreya Sans', sans-serif; */
+    font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
+}
+
+/**
+ * Body
+ */
 body {
-  padding-top: 20px;
-  background-color: #bfba9a;
+    padding-top: 20px;
+    /* background-color: #bfba9a; */
+    background-color: #A2998B;
+    color: #000002;
+}
+
+a {
+    color: #4EA8D8;
+}
+
+a:hover, a:focus {
+    color: #1D5F83;
+}
+
+#main h1, .h1 {
+    color: #E8E6E2;
+    font-weight: bold;
 }
 
 /**
  * Header
  */
-
 #header-container {
     width: 100%;
     background-color: #ffffff;
@@ -24,6 +58,16 @@ body {
 #header-container a {
     /* color: #522929 */
     color: #ffffff;
+}
+
+/**
+ * Navbar
+ *
+ */
+#navbar-container {
+    background-image: linear-gradient(to bottom, #545454, #333333);
+    border: medium none;
+    border-radius: 0;
 }
 
 .navbar-header {
@@ -44,7 +88,9 @@ body {
 }
 
 #navbar-menu li {
-    padding: 2px;
+    /* padding: 2px; */
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #navbar-menu li a {
@@ -52,6 +98,39 @@ body {
     height: 64px;
     font-size: x-large;
     color: #ffffff;
+}
+
+#navbar-share-auth li a {
+    color: #ddd;
+}
+
+#navbar-menu li .dropdown-menu {
+    background-color: #222;
+    margin-top: 0px;
+}
+
+#navbar-share-auth li {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+}
+
+#navbar-share-auth li a {
+    padding: 6px 0 0;
+}
+
+#navbar-share-auth li img {
+    max-height: 32px;
+}
+
+#share {
+    float: right;
+}
+
+#share ul li {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
 }
 
 /**
@@ -71,6 +150,11 @@ body {
     background-color: #ffffff;
 }
 
+
+/**
+ * Content Section
+ *
+ */
 #content {
     background-color: #ffffff;
     border-radius: 4px;
@@ -79,9 +163,43 @@ body {
     padding: 4px 8px;
 }
 
+#breadcrumbs {
+    font-weight: inherit;
+}
+
+/**
+ * Time Slider
+ *
+ */
+.time-slider-container .btn {
+    margin-top: 42%;
+    width: 100%;
+}
+
+/* @todo Refactor */
+#time-slider-container-butter-prod .btn {
+    margin-top: 42%;
+}
+
+.slider-tick.round {
+    border-radius: inherit;
+    width: 12px;
+}
+
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+    margin-left: 0;
+}
+
+.slider-handle {
+    margin-left: -10px !important;
+}
+
+/**
+ * Paraf's Itinerary
+ *
+ */
 #location-desc {
     max-height: 340px;
-    overflow: scroll;
     text-align: left;
 }
 
@@ -89,9 +207,303 @@ body {
     text-align: center;
 }
 
+.map-controls {
+    text-align: center;
+}
+
+.map-controls button {
+    width: 176px;
+    min-height: 64px;
+}
+
+#map-legend .row {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+/**
+ * Oleomargarine Legislation
+ *
+ */
+.oleo-leg-class {
+    display: inline-block;
+    height: 24px;
+    padding: 8px;
+    border: 1px solid;
+}
+
+.oleo-leg-class-null {
+    background-color: #e1e1e1;
+}
+.oleo-leg-class-0 {
+    background-color: #edf8fa;
+}
+.oleo-leg-class-1 {
+    background-color: #b2e2e2;
+}
+.oleo-leg-class-2 {
+    background-color: #65c2a5;
+}
+.oleo-leg-class-3 {
+    background-color: #248b46;
+}
+
+/**
+ * Butter Production
+ *
+ */
+.butter-prod-class {
+    display: inline-block;
+    height: 24px;
+    padding: 8px;
+    border: 1px solid;
+}
+
+.butter-prod-class-null {
+    background-image: url('../img/butter_prod_class_null.png');
+}
+.butter-prod-class-0 {
+    background-color: #ffffe5;
+}
+.butter-prod-class-1 {
+    background-color: #fff7bc;
+}
+.butter-prod-class-2 {
+    background-color: #fee391;
+}
+.butter-prod-class-3 {
+    background-color: #fec44f;
+}
+.butter-prod-class-4 {
+    background-color: #fe9929;
+}
+
+/**
+ * Cottonseed Oil Production
+ *
+ */
+.cottonseed-prod-legend h3 {
+    font-size: large;
+}
+
+.cottonseed-prod-class {
+    display: inline-block;
+    height: 24px;
+    padding: 8px;
+    /* border: 1px solid; */
+}
+
+.cottonseed-prod-mills-1 {
+    background-color: #e60000;
+    border-radius: 50%;
+    border-width: 0;
+    height: 12px;
+    width: 12px;
+    padding: 0;
+    position: relative;
+    left: 36px;
+    bottom: 4px;
+    
+}
+.cottonseed-prod-mills-3 {
+    background-color: #e60000;
+    border-radius: 50%;
+    border-width: 0;
+    height: 18px;
+    width: 18px;
+    padding: 0;
+    position: relative;
+    left: 32px;
+    bottom: 6px;
+
+}
+
+.cottonseed-prod-bales {
+    border-width: 0;
+    text-align: center;
+    vertical-align: top;
+}
+
+.cottonseed-prod-bales-dot {
+    background-color: #006100;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    padding: 0;
+
+    margin-bottom: 100%; /* This should be random() from Sass */
+    /* This should also be random() from Sass */
+    /* margin-left: 4%; */
+    margin-left: 0%;
+}
+
+.cottonseed-prod-railroads {
+    /* background-color: #65c2a5; */
+    border-width: 0;
+}
+
+.cottonseed-prod-railroads-track {
+    border: 1px dashed black;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    display: inline-block;
+    height: 4px;
+    margin-bottom: 100%;
+    width: 100%;
+}
+
+/**
+ * ArcGIS Interface
+ *
+ */
 #map {
     height: 640px;
 }
+
+#map-home {
+    position: absolute;
+    top: 93px;
+    left: 20px;
+    z-index: 50;
+
+    border: 1px solid #57585a;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.HomeButton .home {
+    border-radius: inherit;
+}
+
+/**
+ * Timeslider
+ *
+ */
+.esriTimeSlider {
+    z-index: -1;
+}
+
+.slider.slider-horizontal {
+    width: 100%;
+    height: 64px;
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 24px;
+}
+
+/*
+.slider.slider-horizontal .slider-track {
+    width: 100%;
+}
+*/
+
+.slider-handle {
+    height: 32px;
+    width: 32px;
+}
+
+/**
+ *
+ *
+ */
+#map-tab-panes .tab-pane img {
+
+    /* height: 540px; */
+}
+
+/**
+ * OpenSeadragon
+ *
+ */
+#osd-viewer .openseadragon-container fieldgroup {
+    left: 20px;
+    top: 20px;
+
+    -moz-user-select: none;
+    background-color: #fff;
+    border: 1px solid #57585a;
+    border-radius: 5px;
+    color: #4c4c4c;
+    position: absolute;
+    text-align: center;
+}
+
+#osd-viewer .openseadragon-container fieldgroup button[title="Previous page"],
+#osd-viewer .openseadragon-container fieldgroup button[title="Next page"] {
+    display: none !important;
+}
+
+#osd-viewer .esriSimpleSliderTL {
+    left: inherit;
+    top: inherit;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#osd-viewer #map-home {
+    left: inherit;
+    top: inherit;
+    margin-left: 20px;
+    margin-top: 93px;
+}
+
+/*
+.esriSimpleSlider {
+    -moz-user-select: none;
+    background-color: #fff;
+    border: 1px solid #57585a;
+    border-radius: 5px;
+    color: #4c4c4c;
+    position: absolute;
+    text-align: center;
+}
+*/
+
+.esriSimpleSliderVertical .esriSimpleSliderIncrementButton {
+    border-bottom: 1px solid #57585a;
+    border-radius: 5px 5px 0 0;
+}
+.esriSimpleSlider div {
+    -moz-user-select: none;
+    cursor: pointer;
+    font-family: verdana,helvetica;
+    font-size: 24px;
+    height: 30px;
+    line-height: 25px;
+    width: 30px;
+}
+
+.slider-handle {
+    height: 32px;
+    width: 32px;
+}
+
+.slider-tick {
+    height: 32px;
+    width: 32px;
+}
+
+.slider.slider-horizontal .slider-tick-label-container {
+    margin-top: 52px;
+}
+
+/**
+ * Contact form
+ *
+ */
+#contact input {
+    width: 206px;
+}
+
+#message {
+    display: block;
+}
+
+/**
+ * Footer
+ *
+ */
 
 #footer-navbar {
     text-align: center;

@@ -1,7 +1,7 @@
 {
-  "name": "pureFood",
+  "name": "purefood",
   "version": "0.0.1",
-  "description": "Pure Food Project",
+  "description": "The Pure Food Project",
   "devDependencies": {
     "bower": "^1.3.1",
     "karma": "^0.12.16",
@@ -17,14 +17,18 @@
     "grunt-contrib-jasmine": "~1.0.0"
   },
   "dependencies": {
+    "body-parser": "~1.15.0",
+    "express": "~4.13.4",
+    "express-validator": "^2.20.4",
+    "forever": "~0.15.1",
     "handlebars": "~4.0.5",
     "jade": "~1.11.0",
-    "node-sass": "~3.4.2",
-    "nodemon": "~1.9.1",
     "method-override": "~2.3.5",
     "morgan": "~1.7.0",
-    "express": "~4.13.4",
-    "body-parser": "~1.15.0",
-    "forever": "~0.15.1"
+    "node-sass": "^3.4.2",
+    "node-sass-middleware": "^0.9.8",
+    "nodemailer": "^2.4.1",
+    "nodemailer-sendmail-transport": "^1.0.0",
+    "nodemon": "~1.9.1"
   }
 }
