@@ -7,6 +7,8 @@
 (function (require, angular, app) {
     'use strict';
 
+    console.log(app);
+
     require(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/ArcGISTiledMapServiceLayer",
 	     "esri/TimeExtent", "esri/dijit/TimeSlider", "esri/config", "esri/geometry/Point", "esri/geometry/Extent",
 	     "esri/tasks/query", "esri/tasks/QueryTask",

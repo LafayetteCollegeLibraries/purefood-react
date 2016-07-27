@@ -1,12 +1,12 @@
 <section id="title">
   <div class="container-fluid">
-    <h1>Butter Production</h1>
+    <h1>Butter and Oleomargarine Production</h1>
     <ul class="pull-left breadcrumb">
       <li>
 	<a href="/">Home</a>
       </li>
       <li>
-	<a href="/#/margarine-production">Butter Production</a>
+	<a href="/#/margarine-production">Butter and Oleomargarine Production</a>
       </li>
     </ul>
     <ul class="nav nav-pills pull-right">
@@ -20,14 +20,14 @@
   </div>
 </section>
 
-<section id="content">
+<section id="content" ng-controller="MargarineProductionController">
 
 <div class="container-fluid row">
   <div class="col-xs-12">
     <article>
       <div class="container-fluid">
-	<div id="map">
-	  <div id="map-home"></div>
+	<div id="margarine-production-map" class="map">
+	  <div id="margarine-production-home"></div>
 	</div>
       </div>
     </article>
@@ -67,35 +67,35 @@
     <div class="row">
       <div class="col-xs-2 butter-prod-class butter-prod-class-0"></div>
       <div class="col-xs-10">
-	Less than 100 thousand
+	Less than 100,000 lbs.
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-2 butter-prod-class butter-prod-class-1"></div>
       <div class="col-xs-10">
-	100 thousand to 30 million
+	100,000 to 30 million lbs.
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-2 butter-prod-class butter-prod-class-2"></div>
       <div class="col-xs-10">
-	To 60 million
+	To 60 million lbs.
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-2 butter-prod-class butter-prod-class-3"></div>
       <div class="col-xs-10">
-	To 90 million
+	To 90 million lbs.
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-2 butter-prod-class butter-prod-class-4"></div>
       <div class="col-xs-10">
-	Over 90 million
+	Over 90 million lbs.
       </div>
     </div>
   </div><!-- /#map-legend -->
@@ -106,4 +106,4 @@
   </div>
 </div>
 </section>
-<script type="text/javascript" src="/js/margarine-production.js"></script>
+<!--<script type="text/javascript" src="/js/margarine-production.js"></script>-->

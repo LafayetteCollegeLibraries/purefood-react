@@ -56,11 +56,6 @@ require(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/dijit/Hom
 
 	    $(document).data('layers', layers);
 
-	    // Work-around is necessary for styling
-	    map.on("layers-add-result", function() {
-		    $('#map-home').appendTo('#map_root').show();
-		});
-	    map.addLayers(layers);
 
 	    var timeSlider = $(document).data('timeSlider');
 	    timeSlider = new TimeSlider({
@@ -69,7 +64,7 @@ require(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/dijit/Hom
 
 	    $(document).data('timeSlider', timeSlider);
 
-	    map.setTimeSlider(timeSlider);
+
 	    var timeExtent = new TimeExtent();
 	    timeExtent.startTime = new Date("1/1/1877 UTC");
 	    timeExtent.endTime = new Date("12/31/1899 UTC");
@@ -87,6 +82,14 @@ require(["esri/map", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/dijit/Hom
 	    timeSlider.setLabels(labels);
 
 	    $(document).data('timeSlider', timeSlider);
+
+	    // Work-around is necessary for styling
+	    map.on("layers-add-result", function() {
+		    //$('#map-home').appendTo('#map_root').show();
+		    map.setTimeSlider(timeSlider);
+		});
+	    map.addLayers(layers);
+
 
 	    var TIME_STEPS_MAX = 2;
 	    var tickValues = Array.apply(null, Array(4)).map(function (_, i) { return i; });

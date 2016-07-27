@@ -172,13 +172,15 @@ a:hover, a:focus {
  *
  */
 .time-slider-container .btn {
-    margin-top: 42%;
+    /* margin-top: 42%; */
+    /* margin: 12% 0; */
+    margin: 18px 0;
     width: 100%;
 }
 
 /* @todo Refactor */
 #time-slider-container-butter-prod .btn {
-    margin-top: 42%;
+    /* margin-top: 42%; */
 }
 
 .slider-tick.round {
@@ -288,33 +290,35 @@ a:hover, a:focus {
 
 .cottonseed-prod-class {
     display: inline-block;
+    /*
     height: 24px;
     padding: 8px;
+    */
     /* border: 1px solid; */
 }
 
 .cottonseed-prod-mills-1 {
     background-color: #e60000;
     border-radius: 50%;
-    border-width: 0;
+    /* border-width: 0; */
     height: 12px;
     width: 12px;
     padding: 0;
     position: relative;
-    left: 36px;
-    bottom: 4px;
+    /* left: 36px; */
+    /* bottom: 4px; */
     
 }
 .cottonseed-prod-mills-3 {
     background-color: #e60000;
     border-radius: 50%;
-    border-width: 0;
+    /* border-width: 0; */
     height: 18px;
     width: 18px;
     padding: 0;
     position: relative;
-    left: 32px;
-    bottom: 6px;
+    /* left: 32px; */
+    /* bottom: 6px; */
 
 }
 
@@ -356,11 +360,11 @@ a:hover, a:focus {
  * ArcGIS Interface
  *
  */
-#map {
+.map {
     height: 640px;
 }
 
-#map-home {
+#margarine-legislation-home, #margarine-production-home, #cottonseed-production-home {
     position: absolute;
     top: 93px;
     left: 20px;
@@ -389,7 +393,7 @@ a:hover, a:focus {
 }
 
 .slider.slider-horizontal .slider-track {
-    height: 24px;
+    height: 10px;
 }
 
 /*
@@ -399,8 +403,12 @@ a:hover, a:focus {
 */
 
 .slider-handle {
-    height: 32px;
-    width: 32px;
+    /*
+    height: 12px;
+    width: 12px;
+    */
+    height: 0px;
+    width: 0px;
 }
 
 /**
@@ -474,15 +482,12 @@ a:hover, a:focus {
     width: 30px;
 }
 
-.slider-handle {
-    height: 32px;
-    width: 32px;
-}
-
+/*
 .slider-tick {
     height: 32px;
     width: 32px;
 }
+*/
 
 .slider.slider-horizontal .slider-tick-label-container {
     margin-top: 52px;

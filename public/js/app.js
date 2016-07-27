@@ -11,9 +11,9 @@ define(['angular'], function (ng) {
 	
 	return ng.module('pureFood', [
 				 'app.services',
-				 'app.controllers',
+				 'pureFood.controllers',
 				 'app.filters',
 				 'app.directives',
-				 'dss.storyMap'
+				 'pureFood.storyMap'
 				 ]);
     });
