@@ -256,9 +256,12 @@ app.directive('storyEvent', function($compile) {
 			       ['$rootScope', '$scope', '$attrs', '$sce', '$timeout',
 				function MargarineLegislationController($rootScope, $scope, $attrs, $sce, $timeout) {
 
+				    var mapOptions = { extent: new Extent({xmin: -143.37092112950089,
+									   ymin: 14.993390205927994,
+									   xmax: -50.14609136547047,
+									   ymax: 49.92541072640776,
+									   spatialReference: { wkid: 4326 }}) };
 
-				    //var mapOptions = { 'scale': 30609488.52368693, 'center': new Point(-310339.4065735983, -1295580.8942135999, new SpatialReference({ 'wkid': 102003 })) };
-				    var mapOptions = { 'scale': 30609488.52368693 };
 				    var map = new esri.Map("margarine-legislation-map", mapOptions);
 
 				    $(document).data('map', map);
@@ -407,9 +410,11 @@ app.directive('storyEvent', function($compile) {
 			       ['$rootScope', '$scope', '$attrs', '$sce', '$timeout',
 				function MargarineProductionController($rootScope, $scope, $attrs, $sce, $timeout) {
 
-				    var centerPoint = new Point(86, 384.20001220703125, new SpatialReference({ 'wkid': 102003 }));
-
-				    var mapOptions = { 'scale': 17579831.258048493, 'center': centerPoint };
+				    var mapOptions = { extent: new Extent({xmin: -143.37092112950089,
+									   ymin: 14.993390205927994,
+									   xmax: -50.14609136547047,
+									   ymax: 49.92541072640776,
+									   spatialReference: { wkid: 4326 }})};
 				    var map = new esri.Map("margarine-production-map", mapOptions);
 				    
 				    // Please see https://bugs.dojotoolkit.org/ticket/5438
