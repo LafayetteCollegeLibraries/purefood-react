@@ -161,7 +161,9 @@ app.controller('ChaptersCtrl', ['$scope', '$http', '$sce', function($scope, $htt
 			//chapter.content = $sce.trustAsHtml(chapter.subtitle);
 			//console.log(chapter.content);
 			//chapter.content = $sce.trustAsHtml(chapter.content);
+
 			chapters.push(chapter);
+
 			//$scope.chapters = 
 		    }
 
@@ -332,7 +334,7 @@ app.directive('storyEvent', function($compile) {
 				      $(document).data('hiddenSliderValue', e.value);
 				      });
 				    */
-				    //var tickValues = Array.apply(null, Array(23)).map(function (_, i) { return i + 1877; });
+				    // var tickValues = Array.apply(null, Array(23)).map(function (_, i) { return i + 1877; });
 				    var tickValues = Array.apply(null, Array(23)).map(function (_, i) { return i; });
 				    $(document).data('tickValues', tickValues);
 				    var tickLabels = Array.apply(null, Array(23)).map(function (_, i) { return (i + 1877).toString(); });
@@ -447,7 +449,7 @@ app.directive('storyEvent', function($compile) {
 
 				    var layers = layers.concat(dairyLayers);
 
-				    oleoLayers.push( new esri.layers.ArcGISDynamicMapServiceLayer("//geo.lafayette.edu/arcgis/rest/services/clarkjh/OleoProd_1880_v2/MapServer") );
+				    oleoLayers.push( new esri.layers.ArcGISDynamicMapServiceLayer("//geo.lafayette.edu/arcgis/rest/services/clarkjh/OleoProd_1880_v2/MapServer", options) );
 				    oleoLayers.push( new esri.layers.ArcGISDynamicMapServiceLayer("//geo.lafayette.edu/arcgis/rest/services/clarkjh/OleoProd_1890_v2/MapServer", options) );
 				    oleoLayers.push( new esri.layers.ArcGISDynamicMapServiceLayer("//geo.lafayette.edu/arcgis/rest/services/clarkjh/OleoProd_1900_v2/MapServer", options) );
 
@@ -514,6 +516,7 @@ app.directive('storyEvent', function($compile) {
 
 												   //var layer = dairyLayers[ (dairyLayers.length - 1) - value ];
 												   var dairyLayer = dairyLayers[ value ];
+												   console.log(dairyLayer);
 												   
 												   if(dairyLayer.visible) {
 												       //dairyLayer.setVisibility(false);
@@ -526,18 +529,23 @@ app.directive('storyEvent', function($compile) {
 												       dairyLayer.setVisibility(true);
 												   }
 
-												   if( value == 0 || value == 1 ) {
-												       value = 0;
-												   }
-												   var oleoLayer = oleoLayers[ value ];
-
-												   if(oleoLayer.visible) {
-												       // Set all other dairyLayers as invisible
-												       $.each(oleoLayers.slice(value + 1), function(i, newerOleoLayer) {
-													       newerOleoLayer.setVisibility(false);
-													   });
+												   // For handling the dot density visualization generated from the oleomargarine legislation data set
+												   if(value == 0) {
+												       var oleoLayer = oleoLayers[ value ];
+												       oleoLayer.setVisibility(false);
 												   } else {
-												       oleoLayer.setVisibility(true);
+												       value = value - 1;
+												       var oleoLayer = oleoLayers[ value ];
+												       console.log(oleoLayer);
+
+												       if(oleoLayer.visible) {
+													   // Set all other dairyLayers as invisible
+													   $.each(oleoLayers.slice(value + 1), function(i, newerOleoLayer) {
+														   newerOleoLayer.setVisibility(false);
+													       });
+												       } else {
+													   oleoLayer.setVisibility(true);
+												       }
 												   }
 												   
 											   });
