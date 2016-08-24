@@ -12,11 +12,11 @@ html(lang="en")
 
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Alegreya+Sans:400,100" type="text/css" media="all")
     link(rel="stylesheet", href="//cloud.typography.com/7014354/640968/css/fonts.css?ver=all" type="text/css" media="all")
-    link(rel='stylesheet', href='css/app.css')
+    link(rel='stylesheet', href='css/style.css')
 
     script(src='vendor/openseadragon-bin-0.9.129/openseadragon.js')
 
-    script(src='//js.arcgis.com/3.15/init.js')
+    // script(src='//js.arcgis.com/3.15/init.js')
 
     script(src='bower_components/jquery/dist/jquery.js')
     script(src='vendor/islandora_openseadragon/js/djtilesource.js')
@@ -36,9 +36,9 @@ html(lang="en")
     script(src='bower_components/angular-drupal/build/angular-drupal.min.js')
 
     script(src='app/app.js')
-  body
+  body(ng-app='purefood')
     header
-      nav.navbar.navbar-inverse(role='navigation')
+      nav.navbar.navbar-inverse(role='navigation', ng-controller="NavbarController")
         #header-container.container-fluid
           h2
             a(href="//library.lafayette.edu") Skillman Library at Lafayette College
@@ -53,7 +53,7 @@ html(lang="en")
               li.col-xs-4
                 a(href="/") Home
               li.dropdown.col-xs-3
-                a#map-dropdown.dropdown-toggle(href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Maps
+                a#map-dropdown.dropdown-toggle(href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", ng-click="override($event)") Maps
                   span.caret
                 ul.dropdown-menu(aria-labelledby="map-dropdown")
                   li
@@ -74,7 +74,7 @@ html(lang="en")
                 a(href="/#/notes") Notes & Data
             ul#navbar-share-auth.menu.nav.navbar-right.col-xs-1
               li#share.dropdown
-                a#share-dropdown.dropdown-toggle(href="/", data-toggle="dropdown" aria-haspopup="true", aria-expanded="false")
+                a#share-dropdown.dropdown-toggle(href="/", data-toggle="dropdown" aria-haspopup="true", aria-expanded="false", ng-click="override($event)")
                   div
                     img(src="img/ShareIcon.png")
                   div
@@ -101,6 +101,6 @@ html(lang="en")
     block content
     footer
       include ./includes/footer.jade
-script(type="text/javascript", src="https://w.sharethis.com/button/buttons.js")
+script(type="text/javascript", src="https://ws.sharethis.com/button/buttons.js")
 script(type="text/javascript").
   stLight.options({publisher: "a2d71de3-6a20-4659-9223-663d3d18c2a5", doNotHash: false, doNotCopy: false, hashAddressBar: false});

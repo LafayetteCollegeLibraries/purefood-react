@@ -1,0 +1,33 @@
+/**
+ * Butter Production
+ *
+ */
+.butter-prod-class {
+    display: inline-block;
+    height: 24px;
+    padding: 8px;
+    border: 1px solid;
+}
+
+.butter-prod-class-null {
+    background-image: url('../img/butter_prod_class_null.png');
+}
+.butter-prod-class-0 {
+    background-color: #ffffe5;
+}
+.butter-prod-class-1 {
+    background-color: #fff7bc;
+}
+.butter-prod-class-2 {
+    background-color: #fee391;
+}
+.butter-prod-class-3 {
+    background-color: #fec44f;
+}
+.butter-prod-class-4 {
+    background-color: #fe9929;
+}
+
+#map-legend-factories {
+    text-align: center;
+}

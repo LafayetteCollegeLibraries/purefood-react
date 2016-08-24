@@ -7,6 +7,8 @@ var express = require('express'),
     sendmailTransport = require('nodemailer-sendmail-transport'),
     util = require('util'),
     validator = require('express-validator'),
+    sassMiddleware = require('node-sass-middleware'),
+    path = require('path'),
     app = express(),
     host = process.env.HOST || 'localhost', // @todo Abstract
     port = process.env.PORT || 8001, // @todo Abstract
@@ -22,6 +24,14 @@ app.use(morgan('dev'));                     // log every request to the console
 app.use(bodyParser());                      // pull information from html in POST
 app.use(validator());
 app.use(methodOverride());                  // simulate DELETE and PUT
+app.use(sassMiddleware({
+	    root: path.join(__dirname),
+	    src: 'scss',
+	    dest: 'public',
+
+	    force: true,
+	    debug: true
+}));
 
 router.get('/', function(req, res, next) {
   res.render('index');

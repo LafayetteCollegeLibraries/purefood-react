@@ -20,32 +20,84 @@
   </div>
 </section>
 
-<section id="content" ng-controller="MargarineLegislationController">
+<section id="content" ng-controller="ParafController">
 
 <div class="container-fluid row">
   <div class="col-xs-12">
     <article>
+      <paraf-map time-steps="21">
       <div class="container-fluid">
-	<div id="margarine-legislation-map" class="map">
-	  <div id="margarine-legislation-home"></div>
-	</div>
+	<div id="margarine-legislation-map" class="map"><img src="{{ currentLayer.src }}" height="640px"/></div>
+
+	<paraf-map-layer src="img/OleoLeg_1877.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1878.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1879.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1881.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1882.jpg" />
+
+	<paraf-map-layer src="img/OleoLeg_1883.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1884.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1885.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1886.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1887.jpg" />
+
+	<paraf-map-layer src="img/OleoLeg_1888.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1889.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1891.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1892.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1893.jpg" />
+
+	<paraf-map-layer src="img/OleoLeg_1894.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1895.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1896.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1897.jpg" />
+	<paraf-map-layer src="img/OleoLeg_1898.jpg" />
+
+	<paraf-map-layer src="img/OleoLeg_1899.jpg" />
+
+	<paraf-step-label value="1877" />
+	<paraf-step-label value="1878" />
+	<paraf-step-label value="1879" />
+	<paraf-step-label value="1881" />
+	<paraf-step-label value="1882" />
+	<paraf-step-label value="1883" />
+	<paraf-step-label value="1884" />
+	<paraf-step-label value="1885" />
+	<paraf-step-label value="1886" />
+	<paraf-step-label value="1887" />
+	<paraf-step-label value="1888" />
+	<paraf-step-label value="1889" />
+	<paraf-step-label value="1891" />
+	<paraf-step-label value="1892" />
+	<paraf-step-label value="1893" />
+	<paraf-step-label value="1894" />
+	<paraf-step-label value="1895" />
+	<paraf-step-label value="1896" />
+	<paraf-step-label value="1897" />
+	<paraf-step-label value="1898" />
+	<paraf-step-label value="1899" />
+	
       </div>
+      </paraf-map>
     </article>
   </div>
 </div>
 
 <div class="container-fluid row">
-
   <div class="col-xs-10">
+
     <div class="container-fluid row time-slider-container">
       <div class="col-xs-1">
-	<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button"></button>
+	<button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
       </div>
-      <div class="col-xs-10">
+      <div class="col-xs-1">
+	<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
+      </div>
+      <div class="col-xs-9">
 	<input type="text" class="" value="" id="input-time-slider" />
       </div>
       <div class="col-xs-1">
-	<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button"></button>
+	<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
       </div>
       <div class="time-slider-esri"></div>
     </div>

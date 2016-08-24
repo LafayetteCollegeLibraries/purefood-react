@@ -21,60 +21,80 @@
 </section>
 
 <section id="content">
-<article ng-controller="StoryMapController">
-  <h2> {{ event.name }} </h2>
-  <div class="container-fluid" >
-
-    <div class="row">
-      <div id="location-content" class="col-xs-4">
-	<div class="container-fluid">
-	  <h3 id="location">{{ event.name }}</h3>
-	</div>
-	<div ng-bind-html="event.content"></div>
-      </div>
-      <div class="col-xs-8">
-	<article>
+  <article ng-controller="ParafController">
+    <h2> {{ event.name }} </h2>
+    <div class="container-fluid" >
+      
+      <div class="row">
+	<div id="location-content" class="col-xs-4">
 	  <div class="container-fluid">
-	    <p>This is the Paraf Itinerary. Chapter 1 of the book includes the story of the Chevalier Alfred Paraf. He was a chemist and con man who travelled from his 1844 birthplace in Mulhouse, near the Rhine River in present-day France, to the United States, then across North America, and finally to South America where he died in 1885. The sixteen-step itinerary here follows his path with snapshots of his main stopping points. The travelogue maps his efforts, investments, patents, scams, and accrual of foes.</p>
+	    <h3 id="location">{{ event.name }}</h3>
 	  </div>
-	</article>
+	  <div ng-bind-html="event.content"></div>
+	</div>
+	<div class="col-xs-8">
+	  <article>
+	    <div class="container-fluid">
+	      <p>This is the Paraf Itinerary. Chapter 1 of the book includes the story of the Chevalier Alfred Paraf. He was a chemist and con man who travelled from his 1844 birthplace in Mulhouse, near the Rhine River in present-day France, to the United States, then across North America, and finally to South America where he died in 1885. The sixteen-step itinerary here follows his path with snapshots of his main stopping points. The travelogue maps his efforts, investments, patents, scams, and accrual of foes.</p>
+	    </div>
+	  </article>
+	  
+	  <div class="container-fluid row">
+	    <div class="col-xs-12">
+	      <article>
+		<paraf-map time-steps="16">
+		  <div class="container-fluid">
+		    <div id="margarine-exports-map" class="map"><img src="{{ currentLayer.src }}" /></div>
+		    <paraf-map-layer src="img/placeholder.png" />
 
-	<story-map id="map">
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/Paraf_Test1_land/MapServer"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/Paraf/ParafTravels_places_all/MapServer"></story-layer>
-	  <!--<story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/Paraf_itinerary_v3/MapServer"></story-layer>-->
-	  <!-- 15523.470469800941 -->
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/Paraf_SanFrancisco_v4/MapServer" min-scale="14450.334251395121" layer-id="sanFranciscoMap"></story-layer>
-	  <!-- 15523.470469800941 -->
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/Paraf_Test1_base/MapServer" min-scale="28900.668502776003" layer-id="nycMap"></story-layer>
-	  <!-- 15523.470469797117 -->
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/Paraf_Test1_Boston/MapServer" min-scale="14450.334251395121" layer-id="bostonMap"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Boston_point/MapServer" layer-id="boston" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Chicago_point/MapServer" layer-id="chicago" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Glasgow_point/MapServer" layer-id="glasgow" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Mulhouse_point/MapServer" layer-id="mulhouse" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_NewYork_point/MapServer" layer-id="nyc" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Paris_point/MapServer" layer-id="paris" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Providence_point/MapServer" layer-id="providence" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_SanFrancisco_point/MapServer" layer-id="sanFrancisco" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Santiago_point/MapServer" layer-id="santiago" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_Valdiva_point/MapServer" layer-id="valdivia" visible="false"></story-layer>
-	  <story-layer url="//geo.lafayette.edu/arcgis/rest/services/clarkjh/ParafTravels_VirginiaCity_point/MapServer" layer-id="virginiaCity" visible="false"></story-layer>
-	  <div id="map-home"></div>
-	</story-map>
+		    <paraf-step-label value="1844" />
+		    <paraf-step-label value="1863" />
+		    <paraf-step-label value="1864" />
 
-	<div class="container-fluid map-controls btn-group-lg" role="group">
-	  <button id="prev-step" class="glyphicon glyphicon-step-backward pull-left btn btn-default" type="button"></button>
-	  <button id="play-pause" class="glyphicon glyphicon-play btn btn-default" type="button"></button>
-	  <button id="next-step" class="glyphicon glyphicon-step-forward pull-right btn btn-default" type="button"></button>
+		    <paraf-step-label value="1867" />
+		    <paraf-step-label value="1868" />
+		    <paraf-step-label value="1868" />
+		    <paraf-step-label value="1869" />
+
+		    <paraf-step-label value="1869" />
+		    <paraf-step-label value="1869" />
+		    <paraf-step-label value="1870" />
+		    <paraf-step-label value="1873" />
+
+		    <paraf-step-label value="1873" />
+		    <paraf-step-label value="1875" />
+		    <paraf-step-label value="1876" />
+		    <paraf-step-label value="1877" />
+		    <paraf-step-label value="1879" />
+		  </div>
+		</paraf-map>
+	      </article>
+	    </div>
+	  </div>
+	  
+	  <div class="container-fluid row">
+	    <div class="col-xs-10">
+	      <div class="container-fluid row time-slider-container">
+		<div class="col-xs-1">
+		  <button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
+		</div>
+		<div class="col-xs-1">
+		  <button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
+		</div>
+		<div class="col-xs-9">
+		  <input type="text" class="" value="" id="input-time-slider" />
+		</div>
+		<div class="col-xs-1">
+		  <button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
+		</div>
+		<div class="time-slider-esri"></div>
+	      </div>
+	    </div>
+
+	  </div>
 	</div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-8"></div>
-    </div>
-  </div>
-</article>
+  </article>
 </section>
-<script type="text/javascript" src="/js/paraf.js"></script>
+<!--<script type="text/javascript" src="/js/paraf.js"></script>-->

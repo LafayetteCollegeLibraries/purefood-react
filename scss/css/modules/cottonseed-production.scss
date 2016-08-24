@@ -1,0 +1,75 @@
+/**
+ * Cottonseed Oil Production
+ *
+ */
+.cottonseed-prod-legend h3 {
+    font-size: large;
+}
+
+.cottonseed-prod-class {
+    display: inline-block;
+    /*
+    height: 24px;
+    padding: 8px;
+    */
+    /* border: 1px solid; */
+}
+
+.cottonseed-prod-mills-1 {
+    background-color: #e60000;
+    border-radius: 50%;
+    /* border-width: 0; */
+    height: 12px;
+    width: 12px;
+    padding: 0;
+    position: relative;
+    /* left: 36px; */
+    /* bottom: 4px; */
+    
+}
+.cottonseed-prod-mills-3 {
+    background-color: #e60000;
+    border-radius: 50%;
+    /* border-width: 0; */
+    height: 18px;
+    width: 18px;
+    padding: 0;
+    position: relative;
+    /* left: 32px; */
+    /* bottom: 6px; */
+
+}
+
+.cottonseed-prod-bales {
+    border-width: 0;
+    text-align: center;
+    vertical-align: top;
+}
+
+.cottonseed-prod-bales-dot {
+    background-color: #006100;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    padding: 0;
+
+    margin-bottom: 100%; /* This should be random() from Sass */
+    /* This should also be random() from Sass */
+    /* margin-left: 4%; */
+    margin-left: 0%;
+}
+
+.cottonseed-prod-railroads {
+    /* background-color: #65c2a5; */
+    border-width: 0;
+}
+
+.cottonseed-prod-railroads-track {
+    border: 1px dashed black;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    display: inline-block;
+    height: 4px;
+    margin-bottom: 100%;
+    width: 100%;
+}

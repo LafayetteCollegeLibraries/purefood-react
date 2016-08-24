@@ -20,39 +20,53 @@
   </div>
 </section>
 
-<section id="content" ng-controller="CottonseedProductionController">
+<!-- -->
+<section id="content" ng-controller="ParafController">
 
-  <div class="container-fluid row">
-    <div class="col-xs-12">
-      <article>
-	<div class="container-fluid">
-	  <div id="cottonseed-production-map" class="map">
-	    <div id="cottonseed-production-home"></div>
-	  </div>
-	</div>
-      </article>
-    </div>
+<div class="container-fluid row">
+  <div class="col-xs-12">
+    <article>
+      <paraf-map time-steps="5">
+      <div class="container-fluid">
+	<div id="cottonseed-production-map" class="map"><img src="{{ currentLayer.src }}" /></div>
+
+	<paraf-map-layer src="img/placeholder.png" />
+	<paraf-map-layer src="img/placeholder.png" />
+	<paraf-map-layer src="img/placeholder.png" />
+	<paraf-map-layer src="img/placeholder.png" />
+	<paraf-map-layer src="img/placeholder.png" />
+	    
+	<paraf-step-label value="1860" />
+	<paraf-step-label value="1870" />
+	<paraf-step-label value="1880" />
+	<paraf-step-label value="1890" />
+	<paraf-step-label value="1900" />
+      </div>
+      </paraf-map>
+    </article>
   </div>
+</div>
 
-  <div class="container-fluid row">
-
+<div class="container-fluid row">
   <div class="col-xs-10">
+
     <div class="container-fluid row time-slider-container">
       <div class="col-xs-1">
-	<button id="backward" class="glyphicon glyphicon-backward btn btn-default" type="button"></button>
+	<button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
       </div>
-      <div class="col-xs-10">
+      <div class="col-xs-1">
+	<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
+      </div>
+      <div class="col-xs-9">
 	<input type="text" class="" value="" id="input-time-slider" />
       </div>
       <div class="col-xs-1">
-	<button id="forward" class="glyphicon glyphicon-forward btn btn-default" type="button"></button>
+	<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
       </div>
       <div class="time-slider-esri"></div>
     </div>
 
-
-
-    <div class="container-fluid">
+<div class="container-fluid">
       <article>
 	<div class="container-fluid">
 	  <p>These maps illustrate the changing geography of cottonseed oil. In the postbellum period, cotton growers began to crush their formerly discarded cottonseeds to collect oil.  The organic oil was then used to mix (adulterate) olive oil in the Mediterranean and to blend with lard (pig fat) from meatpackers in the Midwest.  Crushing seeds was a new industry. It used a byproduct of the cotton empire to generate a new market.  It also furthered the reliance on cotton as a staple crop in the South and Texas.</p>

@@ -1,0 +1,51 @@
+
+/**
+ * Bootstrap work-around
+ *
+ */
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media > .pull-left {
+    padding-right: 10px;
+}
+
+html, body {
+    /* font-family: 'Alegreya Sans', sans-serif; */
+    font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
+}
+
+/**
+ * Content
+ */
+#main {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+#title .container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-pills > li > a {
+    background-color: #ffffff;
+}
+
+
+/**
+ * Content Section
+ *
+ */
+#content {
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 4px 8px;
+}
+
+#breadcrumbs {
+    font-weight: inherit;
+}
