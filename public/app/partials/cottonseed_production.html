@@ -3,7 +3,7 @@
     <h1>Cottonseed Oil Production</h1>
     <ul class="pull-left breadcrumb">
       <li>
-	<a href="/">Home</a>
+	<a href="/">Table of Contents</a>
       </li>
       <li>
 	<a href="/#/cottonseed-production">Cottonseed Oil Production</a>
@@ -24,18 +24,18 @@
 <section id="content" ng-controller="ParafController">
 
 <div class="container-fluid row">
-  <div class="col-xs-12">
+  <div class="col-xs-10">
     <article>
       <paraf-map time-steps="5">
       <div class="container-fluid">
 	<div id="cottonseed-production-map" class="map"><img src="{{ currentLayer.src }}" height="640px" /></div>
 
-	<paraf-map-layer src="img/CottonProduction_1860.jpg" />
-	<paraf-map-layer src="img/CottonProduction_1870.jpg" />
-	<paraf-map-layer src="img/CottonProduction_1880.jpg" />
-	<paraf-map-layer src="img/CottonProduction_1890.jpg" />
-	<paraf-map-layer src="img/CottonProduction_1900.jpg" />
-	    
+	<paraf-map-layer src="img/CottonProduction_1860_v2_2304.png" />
+	<paraf-map-layer src="img/CottonProduction_1870_v2_2304.png" />
+	<paraf-map-layer src="img/CottonProduction_1880_v2_2304.png" />
+	<paraf-map-layer src="img/CottonProduction_1890_v2_2304.png" />
+	<paraf-map-layer src="img/CottonProduction_1900_v2_2304.png" />
+
 	<paraf-step-label value="1860" />
 	<paraf-step-label value="1870" />
 	<paraf-step-label value="1880" />
@@ -44,38 +44,6 @@
       </div>
       </paraf-map>
     </article>
-  </div>
-</div>
-
-<div class="container-fluid row">
-  <div class="col-xs-10">
-
-    <div class="container-fluid row time-slider-container">
-      <div class="col-xs-1">
-	<button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
-      </div>
-      <div class="col-xs-1">
-	<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
-      </div>
-      <div class="col-xs-9">
-	<input type="text" class="" value="" id="input-time-slider" />
-      </div>
-      <div class="col-xs-1">
-	<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
-      </div>
-      <div class="time-slider-esri"></div>
-    </div>
-
-<div class="container-fluid">
-      <article>
-	<div class="container-fluid">
-	  <p>These maps illustrate the changing geography of cottonseed oil. In the postbellum period, cotton growers began to crush their formerly discarded cottonseeds to collect oil.  The organic oil was then used to mix (adulterate) olive oil in the Mediterranean and to blend with lard (pig fat) from meatpackers in the Midwest.  Crushing seeds was a new industry. It used a byproduct of the cotton empire to generate a new market.  It also furthered the reliance on cotton as a staple crop in the South and Texas.</p>
-	  <p>The two layers of the maps show two features changing over time. One is the growth of cotton production; the second is the rise of the cottonseed oil crushing industry. As the legend notes, each green dot represents 1000 bales of cotton, while the size of the red dot indicates how many crushing mills each state had.</p>
-	  <p>The crushing industry was nearly non-existent in 1860. It grew to mills in the dozens in the 1870s and then in the several hundreds by the early 1900s. By that point, cottonseed oil was a common component in the consumer product market. Shortening, meatpacking, and grocers’ companies—like N.K. Fairbanks’ Cottolene and Proctor and Gamble’s Crisco— developed new markets built on the regular supply of the organic oil from the South. The purpose of the maps is to show the geographical path of cottonseed oil in relation to the growth of cotton production itself. These maps help illustrate a new layer of southern economy with the rise of the oil by-product industry.</p>
-	  <p>Sources: <i>Bureau of the U.S. Census,</i> 1860, 1870, 1880, 1900; <i>Manufacturers’ Record,</i> 1887, 1916; <i>Oil, Paint, and Drug Reporter</i>.</p>
-	</div>
-      </article>
-    </div>
   </div>
 
   <div class="col-xs-2 row cottonseed-prod-legend" id="map-legend">
@@ -127,8 +95,38 @@
 </div>
 
 <div class="container-fluid row">
-  <div class="col-xs-7">
+  <div class="col-xs-12">
+
+    <div class="container-fluid row time-slider-container">
+      <div class="col-xs-1">
+	<button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
+      </div>
+      <div class="col-xs-1">
+	<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
+      </div>
+      <div class="col-xs-9">
+	<input type="text" class="" value="" id="input-time-slider" />
+      </div>
+      <div class="col-xs-1">
+	<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
+      </div>
+      <div class="time-slider-esri"></div>
+    </div>
+
+    <div class="container-fluid">
+      <article>
+	<div class="container-fluid">
+	  <p>These maps illustrate the changing geography of cottonseed oil. In the postbellum period, cotton growers began to crush their formerly discarded cottonseeds to collect oil.  The organic oil was then used to mix (adulterate) olive oil in the Mediterranean and to blend with lard (pig fat) from meatpackers in the Midwest.  Crushing seeds was a new industry. It used a byproduct of the cotton empire to generate a new market.  It also furthered the reliance on cotton as a staple crop in the South and Texas.</p>
+	  <p>The two layers of the maps show two features changing over time. One is the growth of cotton production; the second is the rise of the cottonseed oil crushing industry. As the legend notes, each green dot represents 1000 bales of cotton, while the size of the red dot indicates how many crushing mills each state had.</p>
+	  <p>The crushing industry was nearly non-existent in 1860. It grew to mills in the dozens in the 1870s and then in the several hundreds by the early 1900s. By that point, cottonseed oil was a common component in the consumer product market. Shortening, meatpacking, and grocers’ companies—like N.K. Fairbanks’ Cottolene and Proctor and Gamble’s Crisco— developed new markets built on the regular supply of the organic oil from the South. The purpose of the maps is to show the geographical path of cottonseed oil in relation to the growth of cotton production itself. These maps help illustrate a new layer of southern economy with the rise of the oil by-product industry.</p>
+	  <p>Sources: <i>Bureau of the U.S. Census,</i> 1860, 1870, 1880, 1900; <i>Manufacturers’ Record,</i> 1887, 1916; <i>Oil, Paint, and Drug Reporter</i>.</p>
+	</div>
+      </article>
+    </div>
   </div>
+
+
+
 </div>
 
 </section>

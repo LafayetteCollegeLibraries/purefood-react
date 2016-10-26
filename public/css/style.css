@@ -17,6 +17,9 @@ a:hover, a:focus {
   color: #E8E6E2;
   font-weight: bold; }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Lato",sans-serif; }
+
 /**
  * Header
  */
@@ -136,8 +139,7 @@ a {
   padding-right: 10px; }
 
 html, body {
-  /* font-family: 'Alegreya Sans', sans-serif; */
-  font-family: "Whitney SSm A","Whitney SSm B",sans-serif; }
+  font-family: "Roboto",sans-serif; }
 
 /**
  * Content
@@ -251,6 +253,12 @@ ul.specs dt {
 .map-controls button {
   width: 176px;
   min-height: 64px; }
+
+#map-legend {
+  position: absolute;
+  /*right: 86px;*/
+  /*bottom: 12px;*/
+  right: 18%; }
 
 #map-legend .row {
   margin-bottom: 8px;

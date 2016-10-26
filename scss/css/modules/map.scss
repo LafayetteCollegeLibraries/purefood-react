@@ -49,6 +49,13 @@
     min-height: 64px;
 }
 
+#map-legend {
+    position: absolute;
+    /*right: 86px;*/
+    /*bottom: 12px;*/
+    right: 18%;
+}
+
 #map-legend .row {
     margin-bottom: 8px;
     margin-top: 8px;

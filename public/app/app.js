@@ -315,9 +315,23 @@ app.controller('ParafController',
 										      $scope.$apply();
 										  });
 
+
+			// Work-around
+			if( $('#time-slider .slider-tick').length > 0 ) {
+			    $('#time-slider .slider-tick').click(function(e) {
+				    console.log('trace');
+				    console.log( $scope.timeControl );
+
+				    $scope.setLayer( $scope.timeControl.slider('getValue') );
+				    $scope.$apply();
+				});
+			}
+
 			$scope.playing = false;
 			$scope.event = { name: 'Loading...', content: '' };
 			$scope.events = [];
+
+
 		    };
 
 		    $scope.prevLayer = function prevLayer() {
@@ -467,6 +481,17 @@ app.controller('CottonseedExportsController',
 									       $scope.$apply();
 									   });
 
+			// Work-around
+			if( $('#time-slider .slider-tick').length > 0 ) {
+			    $('#time-slider .slider-tick').click(function(e) {
+				    console.log('trace');
+				    console.log( $scope.timeControl );
+
+				    $scope.setLayer( $scope.timeControl.slider('getValue') );
+				    $scope.$apply();
+				});
+			}
+
 		}]);
 
 /**
@@ -501,6 +526,17 @@ app.controller('GlucoseExportsController',
 									       }
 									       $scope.$apply();
 									   });
+
+			// Work-around
+			if( $('#time-slider .slider-tick').length > 0 ) {
+			    $('#time-slider .slider-tick').click(function(e) {
+				    console.log('trace');
+				    console.log( $scope.timeControl );
+
+				    $scope.setLayer( $scope.timeControl.slider('getValue') );
+				    $scope.$apply();
+				});
+			}
 		    
 		}]);
 
@@ -537,6 +573,17 @@ app.controller('MargarineExportsController',
 									       }
 									       $scope.$apply();
 									   });
+
+			// Work-around
+			if( $('#time-slider .slider-tick').length > 0 ) {
+			    $('#time-slider .slider-tick').click(function(e) {
+				    console.log('trace');
+				    console.log( $scope.timeControl );
+
+				    $scope.setLayer( $scope.timeControl.slider('getValue') );
+				    $scope.$apply();
+				});
+			}
 		    
 		}]);
 
@@ -590,6 +637,17 @@ app.controller('MargarineLegislationController',
 									       }
 									       $scope.$apply();
 									   });
+
+			// Work-around
+			if( $('#time-slider .slider-tick').length > 0 ) {
+			    $('#time-slider .slider-tick').click(function(e) {
+				    console.log('trace');
+				    console.log( $scope.timeControl );
+
+				    $scope.setLayer( $scope.timeControl.slider('getValue') );
+				    $scope.$apply();
+				});
+			}
 		    
 		}]);
 
