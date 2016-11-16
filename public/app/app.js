@@ -11,55 +11,6 @@ var app = angular.module('purefood', ['ngSanitize', 'angular-drupal', 'ngRoute',
  *
  */
 app.config(['$provide', '$routeProvider', '$stateProvider', '$urlRouterProvider', function($provide, $routeProvider, $stateProvider, $urlRouterProvider) {
-	    $provide.
-	      value('drupalSettings', {
-	        sitePath: 'http://purefood.exhibits.stage.lafayette.edu/admin',
-		endpoint: 'api'
-	      });
-
-	    /*
-	    $routeProvider.
-	      when('/paraf', {
-	        templateUrl: 'app/partials/paraf.html'
-	      }).
-	      when('/margarine-legislation', {
-		      templateUrl: 'app/partials/margarine_legislation.html'
-	      }).
-	      when('/margarine-production', {
-		      templateUrl: 'app/partials/margarine_production.html'
-	      }).
-	      when('/margarine-exports', {
-		      templateUrl: 'app/partials/margarine_exports.html'
-	      }).
-	      when('/cottonseed-production', {
-		      templateUrl: 'app/partials/cottonseed_production.html'
-	      }).
-	      when('/cottonseed-exports', {
-		      templateUrl: 'app/partials/cottonseed_exports.html'
-	      }).
-	      when('/glucose-production', {
-		      templateUrl: 'app/partials/glucose_production.html'
-	      }).
-	      when('/glucose-exports', {
-		      templateUrl: 'app/partials/glucose_exports.html'
-	      }).
-	      when('/notes', {
-		      templateUrl: 'app/partials/notes.html'
-	      }).
-	      otherwise({
-		templateUrl: 'app/partials/chapters.html',
-		controller: 'ChaptersCtrl'
-	      });
-	    */
-
-	    /*
-	    $routeProvider.
-	      otherwise({
-		      templateUrl: 'app/partials/chapters.html',
-		      controller: 'ChaptersCtrl'
-	    });
-	    */
-
 	    $urlRouterProvider.otherwise('/chapters');
 
 	    $stateProvider.
@@ -167,21 +118,6 @@ app.controller('ChaptersCtrl', ['$scope', '$http', '$sce', function($scope, $htt
 
 		    $scope.chapters = chapters;
 		});
-	}]);
-
-/**
- * Controller for the Drupal authentication
- *
- */
-app.controller('UserLoginCtrl', ['$scope', 'drupal', function($scope, drupal) {
-
-	    $scope.submit = function(user) {
-
-		drupal.user_login(user.name, user.pass).then(function(data) {
-			
-			// @todo Integrate with Drupal
-		    });
-	    };
 	}]);
 
 app.controller('NavbarController',

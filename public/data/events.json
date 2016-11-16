@@ -150,7 +150,7 @@
 	"layerId": "nyc"
     },
     {
-        "name":"Chicago",
+        "name":"Cleveland",
         "extent":{
             "xmax":-72.85409020979714,
             "xmin":-102.39462779020286,
@@ -160,8 +160,8 @@
                 "wkid":4326
             }
         },
-        "template":"<div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1873</h4><p>Reports from Chicago indicate that Paraf stopped in the city on his train route out West.</p></div><div class=\"location-urban-scale container-fluid\"><a class=\"fancy\" href=\"img/Chicago_1873_640_792.png\"><img class=\"img-responsive img-thumbnail img-lightbox\" alt=\"location thumbnail\" src=\"img/Chicago_1873_640_792.png\"></a></div>",
-	"image": { "href": "img/chicago.jpg", "title": "Chicago" },
+        "template":"<div id=\"location-desc\" class=\"container-fluid\"><h4 i\\\nd=\"event-title\">1873</h4><p>Reports from Cleveland indicate that Paraf stopped in the city on his train route out West.</p></div><div class=\"location-urban-scale container-fluid\"><a class=\"fancy\" href=\"img/Cleveland_1872_640_471.png\"><img class=\"img-responsive img-thumbnail img-lightbox\" alt=\"location thumbnail\" src=\"img/Cleveland_1872_640_471.png\"></a></div>",
+	"image": { "href": "img/chicago.jpg", "title": "Cleveland" },
 	"layerId": "chicago"
     },
     {
