@@ -133,7 +133,7 @@ app.controller('UserLoginCtrl', ['$scope', 'drupal', function($scope, drupal) {
 	    $scope.submit = function(user) {
 
 		drupal.user_login(user.name, user.pass).then(function(data) {
-			
+
 			alert('Hello ' + data.user.name + '!');
 		    });
 	    };
@@ -160,13 +160,13 @@ app.factory('storyEvents', ['$http', function($http) {
 	    var deferred = $http.get('data/events.json').success(function(data) {
 		    return data;
 		});
-	    
+
 	    return deferred;
 	}]);
-		
+
 app.controller('StoryEventController', ['$rootScope', '$scope',
 					function StoryEventController($rootScope, $scope) {
-		    
+
 					    $scope.updateEvent = function(name, content) {
 						$scope.name = name;
 						$scope.content = content;
@@ -179,7 +179,7 @@ app.directive('storyEvent', function($compile) {
 		controller: 'StoryEventController',
 		link: function (scope, element, attrs) {
 		var template = '<div>This is the name: {{name}}</div><div>This is the content: {{content}}</div>';
-		
+
 		element.html(template).show();
 
 		$compile(element.contents())(scope);
@@ -226,7 +226,7 @@ app.directive('storyEvent', function($compile) {
 			    self.createDiv();
 			    self.createMap();
 			};
-			
+
 			this.createDiv = function () {
 			    mapDiv = document.createElement('div');
 			    mapDiv.setAttribute('id', $attrs.id);
@@ -296,7 +296,7 @@ app.directive('storyEvent', function($compile) {
 			    } else {
 				self.currentStep++;
 			    }
-			    
+
 			    return self.step();
 			};
 
@@ -306,7 +306,7 @@ app.directive('storyEvent', function($compile) {
 			    } else {
 				self.currentStep = self.currentStep - 1;
 			    }
-			    
+
 			    return self.step();
 			};
 
@@ -315,13 +315,13 @@ app.directive('storyEvent', function($compile) {
 			    var mapTimeoutID = window.setTimeout(function() {
 				    self.play();
 				}, self.delay);
-			    
+
 			    $(window).data('mapTimeoutID', mapTimeoutID);
 			    self.nextStep();
 			};
 			this.pause = function() {
 			    var mapTimeoutID = $(window).data('mapTimeoutID');
-			    
+
 			    window.clearTimeout(mapTimeoutID);
 			    $(window).data('mapTimeoutID', null);
 			};
@@ -358,7 +358,7 @@ app.directive('storyEvent', function($compile) {
 					    // @todo Refactor
 					    feature.content = $sce.trustAsHtml(feature.template);
 					    $scope.event = feature;
-					    
+
 					    // Integration for the jQuery fancybox
 					    // This delay is necessary, as there does not appear to be an immediately available Promise or event which can be used
 					    // @todo Refactor
@@ -393,7 +393,7 @@ app.directive('storyEvent', function($compile) {
 				ymax: 140.06463875093743,
 				spatialReference: { wkid: 4326 }
 			    });
-			
+
 			this.createMap = function () {
 			    var options = {
 				zoom: $attrs.zoom ? parseInt($attrs.zoom) : 1,
@@ -409,7 +409,7 @@ app.directive('storyEvent', function($compile) {
 					w.destroyRecursive();
 				    }
 				});
-			    
+
 			    self.map = new Map($attrs.id, options);
 			    self.map.on('load', function (map) {
 

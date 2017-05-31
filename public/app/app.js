@@ -10,63 +10,77 @@ var app = angular.module('purefood', ['ngSanitize', 'angular-drupal', 'ngRoute',
  * Configuration for the routes
  *
  */
-app.config(['$provide', '$routeProvider', '$stateProvider', '$urlRouterProvider', function($provide, $routeProvider, $stateProvider, $urlRouterProvider) {
-	    $urlRouterProvider.otherwise('/chapters');
+app.config(['$provide', '$routeProvider', '$stateProvider', '$urlRouterProvider',
+						function($provide, $routeProvider, $stateProvider, $urlRouterProvider) {
+
+	    $urlRouterProvider.otherwise('/');
 
 	    $stateProvider.
 	      state('/paraf', {
-	       url: '/paraf',
-	       templateUrl: 'app/partials/paraf.html'
+	      	url: '/paraf',
+	      	templateUrl: 'app/partials/paraf.html'
 	      }).
 	      state('/paraf.event.content', {
-	       url: '/paraf-event-content',
-	       templateUrl: 'app/partials/paraf.event.content.html'
+	      	url: '/paraf-event-content',
+	      	templateUrl: 'app/partials/paraf.event.content.html'
 	      }).
 	      state('/margarine-legislation', {
-	       url: '/margarine-legislation',
-		      templateUrl: 'app/partials/margarine_legislation.html'
+	      	url: '/margarine-legislation',
+		    	templateUrl: 'app/partials/margarine_legislation.html'
 	      }).
 	      state('/margarine-production', {
-	       url: '/margarine-production',
-		      templateUrl: 'app/partials/margarine_production.html'
+	      	url: '/margarine-production',
+		    	templateUrl: 'app/partials/margarine_production.html'
 	      }).
 	      state('/margarine-exports', {
-	       url: '/margarine-exports',
-		      templateUrl: 'app/partials/margarine_exports.html'
+	      	url: '/margarine-exports',
+		    	templateUrl: 'app/partials/margarine_exports.html'
+	      }).
+				state('/oil-exports', {
+	      	url: '/oil-exports',
+		    	templateUrl: 'app/partials/oil_exports.html'
 	      }).
 	      state('/cottonseed-production', {
-	       url: '/cottonseed-production',
-		      templateUrl: 'app/partials/cottonseed_production.html'
+	      	url: '/cottonseed-production',
+		    	templateUrl: 'app/partials/cottonseed_production.html'
 	      }).
 	      state('/cottonseed-exports', {
-	       url: '/cottonseed-exports',
-		      templateUrl: 'app/partials/cottonseed_exports.html'
+	      	url: '/cottonseed-exports',
+		    	templateUrl: 'app/partials/cottonseed_exports.html'
 	      }).
 	      state('/glucose-production', {
-	       url: '/glucose-production',
+	      	url: '/glucose-production',
 		      templateUrl: 'app/partials/glucose_production.html'
 	      }).
 	      state('/glucose-exports', {
-	       url: '/glucose-exports',
+	      	url: '/glucose-exports',
 		      templateUrl: 'app/partials/glucose_exports.html'
 	      }).
 	      state('/notes', {
-	       url: '/notes',
+	       	url: '/notes',
 		      templateUrl: 'app/partials/notes.html'
 	      }).
+				state('/data', {
+	       	url: '/data',
+		      templateUrl: 'app/partials/data.html'
+	      }).
 	      state('/contact', {
-	       url: '/contact',
-			  templateUrl: 'app/partials/contact.html',
-			  controller: 'ContactCtrl'
+	      	url: '/contact',
+			  	templateUrl: 'app/partials/contact.html',
+			  	controller: 'ContactCtrl'
 	      }).
 	      state('/copyright', {
-	       url: '/copyright',
-			  templateUrl: 'app/partials/copyright.html'
+	      	url: '/copyright',
+			  	templateUrl: 'app/partials/copyright.html'
 	      }).
 	      state('/chapters', {
-	       url: '/chapters',
-			  templateUrl: 'app/partials/chapters.html',
-			  controller: 'ChaptersCtrl'
+	      	url: '/chapters',
+			  	templateUrl: 'app/partials/chapters.html',
+			  	controller: 'ChaptersCtrl'
+				}).
+				state('/', {
+	      	url: '/',
+			 		templateUrl: 'app/partials/home.html',
 	      });
 	}]);
 
@@ -113,7 +127,7 @@ app.controller('ChaptersCtrl', ['$scope', '$http', '$sce', function($scope, $htt
 
 			chapters.push(chapter);
 
-			//$scope.chapters = 
+			//$scope.chapters =
 		    }
 
 		    $scope.chapters = chapters;
@@ -142,13 +156,13 @@ app.factory('storyEvents', ['$http', function($http) {
 	    var deferred = $http.get('data/events.json').success(function(data) {
 		    return data;
 		});
-	    
+
 	    return deferred;
 	}]);
-		
+
 app.controller('StoryEventController', ['$rootScope', '$scope',
 					function StoryEventController($rootScope, $scope) {
-		    
+
 					    $scope.updateEvent = function(name, content) {
 						$scope.name = name;
 						$scope.content = content;
@@ -161,7 +175,7 @@ app.directive('storyEvent', function($compile) {
 		controller: 'StoryEventController',
 		link: function (scope, element, attrs) {
 		var template = '<div>This is the name: {{name}}</div><div>This is the content: {{content}}</div>';
-		
+
 		element.html(template).show();
 
 		$compile(element.contents())(scope);
@@ -181,7 +195,7 @@ app.factory('parafEvents', ['$http', function($http) {
 	    var deferred = $http.get('data/events.json').success(function(data) {
 		    return data;
 		});
-	    
+
 	    return deferred;
 	}]);
 
@@ -205,7 +219,7 @@ app.controller('ParafController',
 		    $scope.setEvent = function appendEventContent(event) {
 			event.content = $sce.trustAsHtml(event.template);
 			$scope.event = event;
-			
+
 			// Integrate the jQuery fancyboxes once the markup has been loaded
 			// This should be listening for some event to be propagated, but no time to implement this
 			$timeout(function() { $('.fancy').fancybox(); });
@@ -226,13 +240,13 @@ app.controller('ParafController',
 			    if(typeof layer != 'undefined') {
 				$scope.currentLayer = layer;
 			    }
-			    
+
 			    var event = $scope.events[layerIndex];
 			    if(typeof(event) != 'undefined') {
 				/*
 				event.content = $sce.trustAsHtml(event.template);
 				$scope.event = event;
-			    
+
 				// Integrate the jQuery fancyboxes once the markup has been loaded
 				// This should be listening for some event to be propagated, but no time to implement this
 				$timeout(function() { $('.fancy').fancybox(); });
@@ -255,9 +269,6 @@ app.controller('ParafController',
 			// Work-around
 			if( $('#time-slider .slider-tick').length > 0 ) {
 			    $('#time-slider .slider-tick').click(function(e) {
-				    console.log('trace');
-				    console.log( $scope.timeControl );
-
 				    $scope.setLayer( $scope.timeControl.slider('getValue') );
 				    $scope.$apply();
 				});
@@ -302,7 +313,7 @@ app.controller('ParafController',
 				    } else {
 					$scope.nextLayer();
 				    }
-				}, 1000);
+				}, 2000);
 
 			    $($event.currentTarget).removeClass('glyphicon-play').addClass('glyphicon-pause');
 
@@ -420,9 +431,6 @@ app.controller('CottonseedExportsController',
 			// Work-around
 			if( $('#time-slider .slider-tick').length > 0 ) {
 			    $('#time-slider .slider-tick').click(function(e) {
-				    console.log('trace');
-				    console.log( $scope.timeControl );
-
 				    $scope.setLayer( $scope.timeControl.slider('getValue') );
 				    $scope.$apply();
 				});
@@ -466,14 +474,11 @@ app.controller('GlucoseExportsController',
 			// Work-around
 			if( $('#time-slider .slider-tick').length > 0 ) {
 			    $('#time-slider .slider-tick').click(function(e) {
-				    console.log('trace');
-				    console.log( $scope.timeControl );
-
 				    $scope.setLayer( $scope.timeControl.slider('getValue') );
 				    $scope.$apply();
 				});
 			}
-		    
+
 		}]);
 
 /**
@@ -513,14 +518,11 @@ app.controller('MargarineExportsController',
 			// Work-around
 			if( $('#time-slider .slider-tick').length > 0 ) {
 			    $('#time-slider .slider-tick').click(function(e) {
-				    console.log('trace');
-				    console.log( $scope.timeControl );
-
 				    $scope.setLayer( $scope.timeControl.slider('getValue') );
 				    $scope.$apply();
 				});
 			}
-		    
+
 		}]);
 
 /**
@@ -577,16 +579,12 @@ app.controller('MargarineLegislationController',
 			// Work-around
 			if( $('#time-slider .slider-tick').length > 0 ) {
 			    $('#time-slider .slider-tick').click(function(e) {
-				    console.log('trace');
-				    console.log( $scope.timeControl );
-
 				    $scope.setLayer( $scope.timeControl.slider('getValue') );
 				    $scope.$apply();
 				});
 			}
-		    
+
 		}]);
 
 // Bootstrap the application
 //angular.bootstrap(document, ['purefood']);
-

@@ -6,7 +6,6 @@
     /* margin-top: 42%; */
     /* margin: 12% 0; */
     margin: 18px 0;
-    width: 100%;
 }
 
 /* @todo Refactor */
@@ -50,10 +49,7 @@
 }
 
 #map-legend {
-    position: absolute;
-    /*right: 86px;*/
-    /*bottom: 12px;*/
-    right: 18%;
+    //position: absolute;
 }
 
 #map-legend .row {
@@ -67,8 +63,10 @@
  *
  */
 .map {
-    height: 640px;
     text-align: center;
+		img {
+			width: 100%;
+		}
 }
 
 #margarine-legislation-home, #margarine-production-home, #cottonseed-production-home {

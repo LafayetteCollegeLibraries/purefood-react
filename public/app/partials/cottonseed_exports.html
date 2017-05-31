@@ -3,7 +3,7 @@
     <h1>Cottonseed Oil Exports</h1>
     <ul class="pull-left breadcrumb">
       <li>
-	<a href="/">Table of Contents</a>
+	<a href="/">Home</a>
       </li>
       <li>
 	<a href="/#/cottonseed-exports">Cottonseed Oil Exports</a>
@@ -22,22 +22,28 @@
 
 <section id="content" ng-controller="ParafController">
   <div class="container-fluid row">
-    <div class="col-xs-12">
+    <div class="col-xs-10">
       <article>
-	<paraf-map time-steps="2">
-	  <div class="container-fluid">
-	    <div id="cottonseed-exports-map" class="map"><img src="{{ currentLayer.src }}" /></div>
-
-	    <paraf-map-layer src="img/cottonseed_oil_exports.png" />
-	    <paraf-map-layer src="img/cottonseed_oil_exports.png" />
-	    
-	    <paraf-step-label value="1900" />
-	    <paraf-step-label value="1900" />
-
-	  </div>
-	</paraf-map>
+	      <paraf-map time-steps="3">
+	        <div class="container-fluid">
+	          <div id="cottonseed-exports-map" class="map"><img src="{{ currentLayer.src }}" /></div>
+	          <paraf-map-layer src="img/cottonseed_oil_exports_1880.jpg" />
+	          <paraf-map-layer src="img/cottonseed_oil_exports_1890.jpg" />
+			      <paraf-map-layer src="img/cottonseed_oil_exports_1900.jpg" />
+	          <paraf-step-label value="1880" />
+	          <paraf-step-label value="1890" />
+			      <paraf-step-label value="1900" />
+	        </div>
+	      </paraf-map>
       </article>
     </div>
+		<div class="col-xs-2 row" id="map-legend">
+	    <div class="row">
+	      <div class="col-xs-12">
+		        <img src="img/cottonseed_oil_exports_legend.png" />
+	      </div>
+	    </div>
+		</div>
   </div>
 
   <div class="container-fluid row">

@@ -58,49 +58,16 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 #navbar-menu {
   height: 64px; }
+  #navbar-menu li {
+    padding-left: 2px;
+    padding-right: 2px; }
+    #navbar-menu li a {
+      text-align: center;
+      height: 64px;
+      font-size: 1.2em;
+      color: #ffffff;
+      line-height: 32px; }
 
-#navbar-menu li {
-  /* padding: 2px; */
-  padding-left: 2px;
-  padding-right: 2px; }
-
-#navbar-menu li a {
-  text-align: center;
-  height: 64px;
-  font-size: x-large;
-  color: #ffffff; }
-
-/*
-#navbar-menu li span {
-    text-align: center;
-    height: 64px;
-    font-size: x-large;
-    color: #ffffff;
-}
-*/
-/*
-#navbar-menu li a {
-    color: #ffffff;
-    font-size: x-large;
-    height: 64px;
-    text-align: center;
-}
-.nav > li > a {
-    display: block;
-    padding: 10px 15px;
-    position: relative;
-}
-a {
-    color: #4ea8d8;
-}
-a {
-    color: #428bca;
-    text-decoration: none;
-}
-a {
-    background: transparent none repeat scroll 0 0;
-}
-*/
 #navbar-share-auth li a {
   color: #ddd; }
 
@@ -219,8 +186,7 @@ ul.specs dt {
 .time-slider-container .btn {
   /* margin-top: 42%; */
   /* margin: 12% 0; */
-  margin: 18px 0;
-  width: 100%; }
+  margin: 18px 0; }
 
 /* @todo Refactor */
 #time-slider-container-butter-prod .btn {
@@ -254,12 +220,6 @@ ul.specs dt {
   width: 176px;
   min-height: 64px; }
 
-#map-legend {
-  position: absolute;
-  /*right: 86px;*/
-  /*bottom: 12px;*/
-  right: 18%; }
-
 #map-legend .row {
   margin-bottom: 8px;
   margin-top: 8px; }
@@ -269,8 +229,9 @@ ul.specs dt {
  *
  */
 .map {
-  height: 640px;
   text-align: center; }
+  .map img {
+    width: 100%; }
 
 #margarine-legislation-home, #margarine-production-home, #cottonseed-production-home {
   position: absolute;
@@ -382,9 +343,6 @@ ul.specs dt {
 .slider.slider-horizontal .slider-tick-label-container {
   margin-top: 52px; }
 
-.location-urban-scale img {
-  height: 420px; }
-
 /**
  * Oleomargarine Legislation
  *
@@ -440,6 +398,9 @@ ul.specs dt {
 
 #map-legend-factories {
   text-align: center; }
+
+#map-legend img {
+  width: 100%; }
 
 /**
  * Cottonseed Oil Production
