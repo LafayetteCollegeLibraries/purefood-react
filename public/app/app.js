@@ -60,10 +60,6 @@ app.config(['$provide', '$routeProvider', '$stateProvider', '$urlRouterProvider'
 	       	url: '/notes',
 		      templateUrl: 'app/partials/notes.html'
 	      }).
-				state('/data', {
-	       	url: '/data',
-		      templateUrl: 'app/partials/data.html'
-	      }).
 	      state('/contact', {
 	      	url: '/contact',
 			  	templateUrl: 'app/partials/contact.html',
