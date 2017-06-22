@@ -8,11 +8,6 @@
     margin: 18px 0;
 }
 
-/* @todo Refactor */
-#time-slider-container-butter-prod .btn {
-    /* margin-top: 42%; */
-}
-
 .slider-tick.round {
     border-radius: inherit;
     width: 12px;
@@ -55,6 +50,10 @@
 #map-legend .row {
     margin-bottom: 8px;
     margin-top: 8px;
+}
+
+.slider-tick-label {
+		transform: rotate(-45deg);
 }
 
 
