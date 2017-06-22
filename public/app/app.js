@@ -110,20 +110,11 @@ app.controller('ContactCtrl', ['$scope', '$http', '$location', '$timeout', funct
  */
 app.controller('ChaptersCtrl', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
 	    $http.get('data/chapters.json').success(function(data) {
-		    //$scope.chapters = data;
 
 		    var chapters = [];
 		    for (i in data) {
 			chapter = data[i];
-
-			//chapter.content = $sce.trustAsHtml(chapter.title);
-			//chapter.content = $sce.trustAsHtml(chapter.subtitle);
-			//console.log(chapter.content);
-			//chapter.content = $sce.trustAsHtml(chapter.content);
-
 			chapters.push(chapter);
-
-			//$scope.chapters =
 		    }
 
 		    $scope.chapters = chapters;
@@ -239,14 +230,7 @@ app.controller('ParafController',
 
 			    var event = $scope.events[layerIndex];
 			    if(typeof(event) != 'undefined') {
-				/*
-				event.content = $sce.trustAsHtml(event.template);
-				$scope.event = event;
 
-				// Integrate the jQuery fancyboxes once the markup has been loaded
-				// This should be listening for some event to be propagated, but no time to implement this
-				$timeout(function() { $('.fancy').fancybox(); });
-				*/
 				$scope.setEvent(event);
 			    }
 			};
@@ -328,14 +312,6 @@ app.controller('ParafController',
 
 			    // @todo Refactor
 			    var event = $scope.events[0];
-			    /*
-			    event.content = $sce.trustAsHtml(event.template);
-			    $scope.event = event;
-
-			    // Integrate the jQuery fancyboxes once the markup has been loaded
-			    // This should be listening for some event to be propagated, but no time to implement this
-			    $timeout(function() { $('.fancy').fancybox(); });
-			    */
 			    $scope.setEvent(event);
 			});
 		}]);
@@ -350,22 +326,6 @@ app.directive('parafMap', function() {
 	    }
 	};
     });
-
-/*
-app.controller('ParafLayerController',
-	       ['$rootScope', '$scope', '$attrs',
-		function ParafLayerController($rootScope, $scope, $attrs) {
-
-		    this.init = function init() {
-			/*
-			console.log($attrs);
-			$scope.timeSteps = window.parseInt($attrs.timeSteps);
-			console.log($scope.timeSteps);
-			* /
-			$scope.layers.append($attrs.src);
-		    };
-		}]);
-*/
 
 app.directive('parafMapLayer', function () {
 	return {
@@ -406,7 +366,6 @@ app.controller('CottonseedExportsController',
 
 		    var TIME_STEPS_MAX = 2;
 		    var tickValues = Array.apply(null, Array(2)).map(function (_, i) { return i; });
-		    //var tickLabels = Array.apply(null, Array(23)).map(function (_, i) { return (i + 1885).toString(); });
 		    var tickLabels = ['1900','1900'];
 
 		    var timeControl = $("#input-time-slider").slider({ id: 'time-slider',
@@ -581,6 +540,3 @@ app.controller('MargarineLegislationController',
 			}
 
 		}]);
-
-// Bootstrap the application
-//angular.bootstrap(document, ['purefood']);
