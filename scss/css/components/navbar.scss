@@ -34,7 +34,7 @@
 		  height: 64px;
 		  font-size: 1.2em;
 		  color: #ffffff;
-			line-height: 32px;
+			line-height: 42px;
 		}
 	}
 }
@@ -46,6 +46,7 @@
 #navbar-menu li .dropdown-menu {
     background-color: #222;
     margin-top: 0px;
+		min-width: 100%;
 }
 
 #navbar-share-auth li {
@@ -55,7 +56,7 @@
 }
 
 #navbar-share-auth li a {
-    padding: 6px 0 0;
+    padding: 6px 6px;
 }
 
 #navbar-share-auth li img {
