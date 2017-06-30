@@ -3,7 +3,7 @@
     <h1>Glucose Exports</h1>
     <ul class="pull-left breadcrumb">
       <li>
-	<a href="/">Table of Contents</a>
+	<a href="/">Home</a>
       </li>
       <li>
 	<a href="/#/cottonseed-exports">Glucose Exports</a>
@@ -22,28 +22,35 @@
 
 <section id="content" ng-controller="ParafController">
   <div class="container-fluid row">
-    <div class="col-xs-12">
+    <div class="col-xs-10">
       <article>
 	<paraf-map time-steps="5">
 	  <div class="container-fluid">
 	    <div id="glucose-exports-map" class="map"><img src="{{ currentLayer.src }}" /></div>
 
-	    <paraf-map-layer src="img/glucose_exports_1885.png" />
-	    <paraf-map-layer src="img/glucose_exports_1890.png" />
-	    <paraf-map-layer src="img/glucose_exports_1895.png" />
-	    <paraf-map-layer src="img/glucose_exports_1900.png" />
-	    <paraf-map-layer src="img/glucose_exports_1905.png" />
-	    
-	    <paraf-step-label value="1885-1889" />
-	    <paraf-step-label value="1890-1894" />
-	    <paraf-step-label value="1895-1899" />
-	    <paraf-step-label value="1900-1904" />
-	    <paraf-step-label value="1905-1909" />
+	    <paraf-map-layer src="img/glucose_exports_1890.jpg" />
+	    <paraf-map-layer src="img/glucose_exports_1895.jpg" />
+	    <paraf-map-layer src="img/glucose_exports_1900.jpg" />
+	    <paraf-map-layer src="img/glucose_exports_1905.jpg" />
+	    <paraf-map-layer src="img/glucose_exports_1910.jpg" />
+
+	    <paraf-step-label value="1890" />
+	    <paraf-step-label value="1895" />
+	    <paraf-step-label value="1900" />
+	    <paraf-step-label value="1905" />
+	    <paraf-step-label value="1910" />
 
 	  </div>
 	</paraf-map>
       </article>
     </div>
+		<div class="col-xs-2 row" id="map-legend">
+	    <div class="row">
+	      <div class="col-xs-12">
+		        <img src="img/glucose_exports_legend.png" />
+	      </div>
+	    </div>
+		</div>
   </div>
 
   <div class="container-fluid row">
@@ -67,12 +74,16 @@
       <div class="container-fluid">
       <article>
 	<div class="container-fluid">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et felis posuere, pulvinar sapien at, facilisis quam. Nulla sed congue lorem, lobortis laoreet eros. In fermentum elit justo, et convallis nisi sollicitudin ut. Donec tincidunt mattis mi, maximus porta nulla. Duis euismod mauris et ante sagittis, ac sollicitudin est faucibus. Donec consequat pulvinar ipsum consequat blandit. Mauris pretium vehicula nibh a tincidunt. Morbi at lorem a neque fermentum rhoncus.</p>
-	  <p>Fusce interdum nec massa tincidunt congue. Morbi id lacus vitae augue rhoncus iaculis sed sit amet nisi. Pellentesque quis neque vestibulum, cursus mauris vitae, faucibus justo. Donec dignissim mollis libero. Fusce maximus nec eros eget faucibus. In pulvinar metus nisl, ac elementum nisi interdum at. Vestibulum gravida nulla lectus. Duis aliquam dui blandit iaculis mattis. Quisque venenatis dui non purus porta tincidunt. Duis placerat sapien sed magna dignissim, et elementum velit convallis. Aenean sed enim porta, lacinia mauris sit amet, malesuada dolor. Nullam et dui ornare, finibus felis eget, elementum mi. Etiam quis volutpat erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at ex sit amet nunc dapibus aliquam. Vestibulum posuere eros in vehicula vehicula.</p>
+		<p>These maps show trends in the export flow of glucose from United States ports to the world from 1890 to 1910. Exporters shipped glucose (or “grape-sugar”) by the tens of millions of pounds throughout the later 1800s. The trade grew from three export ports in 1890 (Boston, New York, and Detroit) to six in 1910; it expanded from five global regional destinations to seven. In terms of quantity, the exports grew fifteen-fold from about 46 million to 728 million pounds in 1910. Some of the more notable trends are the increases in shipment to various South American countries by the early 1900s and shipments to new Asian markets beginning in 1905. The United Kingdom was such a large trading partner with the U.S. for glucose that their records offered more precision and, thus, the maps show direct flows to the UK while showing aggregated export streams to regions (Northern Europe, Southern Europe, South America) with less specificity in record keeping. Full data sets of export and import locations listing individual nations and quantities are <a href="/#/notes">here</a>.</p>
+	</div>
+	<div class="container-fluid">
+		<ol id="notes">
+			<li><i>Because trade records provide a wide range of quantities per year, for the sake of reader legibility the maps represent proportions. For example, an arrow five-hatch-marks wide is five orders of magnitude greater than an arrow with one hatch mark, while the width of the five-hatch arrow is five times the width of the one-hatch arrow. Readers can thus view the maps to gain a sense of growth in export markets, relative quantities to various parts of the world, and sense of scale in the global marketplace for supposed adulterants.</i></li>
+			<li><i>The maps derive from government trade statistics that listed departure ports (export locations) and final destinations (import locations), but not together. For instance, while we know manufacturers shipped x pounds of glucose from New York in 1890, we do not know where, specifically, that specific quantity ended up. Therefore, the maps show the commodities shipped from individual U.S. ports to meet in the Atlantic before dispersing to final destinations.</i></li>
+			<li><i>In general, but not consistently, the government statistics used to construct theses maps documented foreign imports by country. Thus, in creating these maps the countries were aggregated into regions such as Northern Europe, Southern Europe, South America, Central America, Africa, and Asia. On the export side, various cities were aggregated into regions based on geographical proximity. The full data sets show specific nations.</i></li>
+		</ol>
 	</div>
       </article>
     </div>
   </div>
 </div>
-
-<!--<script type="text/javascript" src="/js/glucose-exports.js"></script>-->

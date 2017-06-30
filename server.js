@@ -60,7 +60,7 @@ app.post('/contact', function(req, res) {
 
 	mailOpts = {
 	    from: req.body.name + ' <' + req.body.email + '>',
-	    to: 'griffinj@lafayette.edu',
+	    to: 'dss@lafayette.edu',
 	    subject: 'Pure Food Project (' + req.body.subject + ')',
 	    text: req.body.body
 	};
@@ -69,10 +69,10 @@ app.post('/contact', function(req, res) {
 
 		// Handling for errors
 		if(error) {
-		    responseBody = "We're sorry, there appears to have been an error with your submission.  Please contact dss@lafayette.edu directly.";
-		    statusCode = 400;
-		}
-	    });
+		   	responseBody = "We're sorry, there appears to have been an error with your submission.  Please contact dss@lafayette.edu directly.";
+				statusCode = 400;
+			}
+	});
 
 	var errors = req.validationErrors();
 	if(errors) {

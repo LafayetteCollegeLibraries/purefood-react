@@ -12,7 +12,8 @@
 }
 
 html, body {
-    font-family: "Roboto",sans-serif;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.0em;
 }
 
 /**
@@ -43,8 +44,23 @@ html, body {
     margin-bottom: 16px;
     margin-top: 16px;
     padding: 4px 8px;
+
+		.container-fluid {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		#home {
+			/* font-size: 1.2em; */
+		}
 }
 
 #breadcrumbs {
-    font-weight: inherit;
+  font-weight: inherit;
+}
+
+#notes {
+	padding-left: 12px;
+	padding-right: 12px;
+	font-size: smaller;
 }

@@ -3,7 +3,6 @@
  */
 body {
   padding-top: 20px;
-  /* background-color: #bfba9a; */
   background-color: #A2998B;
   color: #000002; }
 
@@ -34,7 +33,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   clear: both; }
 
 #header-container a {
-  /* color: #522929 */
   color: #ffffff; }
 
 /**
@@ -58,55 +56,23 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 #navbar-menu {
   height: 64px; }
+  #navbar-menu li {
+    padding-left: 2px;
+    padding-right: 2px; }
+    #navbar-menu li a {
+      text-align: center;
+      height: 64px;
+      font-size: 1.2em;
+      color: #ffffff;
+      line-height: 42px; }
 
-#navbar-menu li {
-  /* padding: 2px; */
-  padding-left: 2px;
-  padding-right: 2px; }
-
-#navbar-menu li a {
-  text-align: center;
-  height: 64px;
-  font-size: x-large;
-  color: #ffffff; }
-
-/*
-#navbar-menu li span {
-    text-align: center;
-    height: 64px;
-    font-size: x-large;
-    color: #ffffff;
-}
-*/
-/*
-#navbar-menu li a {
-    color: #ffffff;
-    font-size: x-large;
-    height: 64px;
-    text-align: center;
-}
-.nav > li > a {
-    display: block;
-    padding: 10px 15px;
-    position: relative;
-}
-a {
-    color: #4ea8d8;
-}
-a {
-    color: #428bca;
-    text-decoration: none;
-}
-a {
-    background: transparent none repeat scroll 0 0;
-}
-*/
 #navbar-share-auth li a {
   color: #ddd; }
 
 #navbar-menu li .dropdown-menu {
   background-color: #222;
-  margin-top: 0px; }
+  margin-top: 0px;
+  min-width: 100%; }
 
 #navbar-share-auth li {
   display: inline-block;
@@ -114,7 +80,7 @@ a {
   width: 50%; }
 
 #navbar-share-auth li a {
-  padding: 6px 0 0; }
+  padding: 6px 6px; }
 
 #navbar-share-auth li img {
   max-height: 32px; }
@@ -139,7 +105,8 @@ a {
   padding-right: 10px; }
 
 html, body {
-  font-family: "Roboto",sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0em; }
 
 /**
  * Content
@@ -165,14 +132,28 @@ html, body {
   margin-bottom: 16px;
   margin-top: 16px;
   padding: 4px 8px; }
+  #content .container-fluid {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  #content #home {
+    /* font-size: 1.2em; */ }
 
 #breadcrumbs {
   font-weight: inherit; }
+
+#notes {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: smaller; }
 
 /**
  * Footer
  *
  */
+footer.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px; }
+
 #footer-navbar {
   text-align: center;
   margin-bottom: 0px; }
@@ -219,12 +200,7 @@ ul.specs dt {
 .time-slider-container .btn {
   /* margin-top: 42%; */
   /* margin: 12% 0; */
-  margin: 18px 0;
-  width: 100%; }
-
-/* @todo Refactor */
-#time-slider-container-butter-prod .btn {
-  /* margin-top: 42%; */ }
+  margin: 18px 0; }
 
 .slider-tick.round {
   border-radius: inherit;
@@ -254,23 +230,21 @@ ul.specs dt {
   width: 176px;
   min-height: 64px; }
 
-#map-legend {
-  position: absolute;
-  /*right: 86px;*/
-  /*bottom: 12px;*/
-  right: 18%; }
-
 #map-legend .row {
   margin-bottom: 8px;
   margin-top: 8px; }
+
+.slider-tick-label {
+  transform: rotate(-45deg); }
 
 /**
  * ArcGIS Interface
  *
  */
 .map {
-  height: 640px;
   text-align: center; }
+  .map img {
+    width: 100%; }
 
 #margarine-legislation-home, #margarine-production-home, #cottonseed-production-home {
   position: absolute;
@@ -382,9 +356,6 @@ ul.specs dt {
 .slider.slider-horizontal .slider-tick-label-container {
   margin-top: 52px; }
 
-.location-urban-scale img {
-  height: 420px; }
-
 /**
  * Oleomargarine Legislation
  *
@@ -439,6 +410,12 @@ ul.specs dt {
   background-color: #fe9929; }
 
 #map-legend-factories {
+  text-align: center; }
+
+#map-legend img {
+  width: 100%; }
+
+#map-legend h2 {
   text-align: center; }
 
 /**

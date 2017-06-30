@@ -1,7 +1,7 @@
 {
   "name": "purefood",
-  "description": "Food Adulteration History Project",
-  "version": "0.0.0",
+  "description": "Pure Food Project",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "angular": "1.4.x",

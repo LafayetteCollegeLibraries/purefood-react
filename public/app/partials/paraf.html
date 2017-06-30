@@ -3,7 +3,7 @@
     <h1>Paraf's Itinerary</h1>
     <ul class="pull-left breadcrumb">
       <li>
-	<a href="/">Table of Contents</a>
+	<a href="/">Home</a>
       </li>
       <li>
 	<a href="/#/paraf">Paraf's Itinerary</a>
@@ -24,7 +24,7 @@
   <article ng-controller="ParafController">
     <h2> {{ event.name }} </h2>
     <div class="container-fluid" >
-      
+
       <div class="row">
 	<div id="location-content" class="col-xs-4">
 	  <div class="container-fluid">
@@ -38,13 +38,13 @@
 	      <p>This is the Paraf Itinerary. Chapter 1 of the book includes the story of the Chevalier Alfred Paraf. He was a chemist and con man who travelled from his 1844 birthplace in Mulhouse, near the Rhine River in present-day France, to the United States, then across North America, and finally to South America where he died in 1885. The sixteen-step itinerary here follows his path with snapshots of his main stopping points. The travelogue maps his efforts, investments, patents, scams, and accrual of foes.</p>
 	    </div>
 	  </article>
-	  
+
 	  <div class="container-fluid row">
 	    <div class="col-xs-12">
 	      <article>
 		<paraf-map time-steps="16">
 		  <div class="container-fluid">
-		    <div id="margarine-exports-map" class="map"><img src="{{ currentLayer.src }}" height="640px" /></div>
+		    <div id="margarine-exports-map" class="map"><img src="{{ currentLayer.src }}" /></div>
 
 		    <paraf-map-layer src="img/ParafTravels_Mulhouse_960.png" />
 		    <paraf-map-layer src="img/ParafTravels_Glasgow_960_arrow.png" />
@@ -52,7 +52,7 @@
 
 		    <paraf-map-layer src="img/ParafTravels_NewYork_960_arrow.png" />
 		    <paraf-map-layer src="img/ParafTravels_Boston_960_arrow.png" />
-		    <paraf-map-layer src="img/ParafTravels_NewYork_960_arrow.png" />
+		    <paraf-map-layer src="img/ParafTravels_NewYork_960_2_arrow.png" />
 		    <paraf-map-layer src="img/ParafTravels_Providence_960_arrow.png" />
 		    <paraf-map-layer src="img/ParafTravels_NewYork_960_3_arrow.png" />
 		    <paraf-map-layer src="img/ParafTravels_Providence_960_2_arrow.png" />
@@ -88,30 +88,27 @@
 	      </article>
 	    </div>
 	  </div>
-	  
+
 	  <div class="container-fluid row">
-	    <div class="col-xs-10">
-	      <div class="container-fluid row time-slider-container">
-		<div class="col-xs-1">
-		  <button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
-		</div>
-		<div class="col-xs-1">
-		  <button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
-		</div>
-		<div class="col-xs-9">
-		  <input type="text" class="" value="" id="input-time-slider" />
-		</div>
-		<div class="col-xs-1">
-		  <button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
-		</div>
-		<div class="time-slider-esri"></div>
+	  	<div class="col-xs-10">
+	    	<div class="container-fluid row time-slider-container">
+					<div class="col-xs-1">
+		  			<button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
+					</div>
+					<div class="col-xs-1">
+		  			<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
+					</div>
+					<div class="col-xs-9">
+		  			<input type="text" class="" value="" id="input-time-slider" />
+					</div>
+					<div class="col-xs-1">
+		  			<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
+					</div>
 	      </div>
 	    </div>
-
 	  </div>
 	</div>
       </div>
     </div>
   </article>
 </section>
-<!--<script type="text/javascript" src="/js/paraf.js"></script>-->
