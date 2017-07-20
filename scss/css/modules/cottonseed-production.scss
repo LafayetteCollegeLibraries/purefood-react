@@ -2,6 +2,10 @@
  * Cottonseed Oil Production
  *
  */
+
+$mills-legend-color: #d95f02;
+$bales-legend-color: #1b9e77;
+
 .cottonseed-prod-legend h3 {
     font-size: large;
 }
@@ -16,7 +20,7 @@
 }
 
 .cottonseed-prod-mills-1 {
-    background-color: #e60000;
+    background-color: $mills-legend-color;
     border-radius: 50%;
     /* border-width: 0; */
     height: 12px;
@@ -28,7 +32,7 @@
     
 }
 .cottonseed-prod-mills-3 {
-    background-color: #e60000;
+    background-color: $mills-legend-color;
     border-radius: 50%;
     /* border-width: 0; */
     height: 18px;
@@ -47,7 +51,7 @@
 }
 
 .cottonseed-prod-bales-dot {
-    background-color: #006100;
+    background-color: $bales-legend-color;
     display: inline-block;
     height: 3px;
     width: 3px;

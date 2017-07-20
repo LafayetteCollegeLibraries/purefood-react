@@ -3,18 +3,18 @@
     <h1>Cottonseed Oil Production</h1>
     <ul class="pull-left breadcrumb">
       <li>
-	<a href="/">Home</a>
+        <a href="/">Home</a>
       </li>
       <li>
-	<a href="/#/cottonseed-production">Cottonseed Oil Production</a>
+        <a href="/#/cottonseed-production">Cottonseed Oil Production</a>
       </li>
     </ul>
     <ul class="nav nav-pills pull-right">
       <li role="presentation" id="contact">
-	<a href="/#/contact">Contact Us</a>
+  <a href="/#/contact">Contact Us</a>
       </li>
       <li role="presentation" id="copyright">
-	<a href="/#/copyright">Copyright</a>
+  <a href="/#/copyright">Copyright</a>
       </li>
     </ul>
   </div>
@@ -22,109 +22,113 @@
 
 <!-- -->
 <section id="content" ng-controller="ParafController">
-
-<div class="container-fluid row">
-  <div class="col-xs-10">
-    <article>
-      <paraf-map time-steps="5">
-      <div class="container-fluid">
-	<div id="cottonseed-production-map" class="map"><img src="{{ currentLayer.src }}" /></div>
-
-	<paraf-map-layer src="img/CottonProduction_1860_v2_2304.png" />
-	<paraf-map-layer src="img/CottonProduction_1870_v2_2304.png" />
-	<paraf-map-layer src="img/CottonProduction_1880_v2_2304.png" />
-	<paraf-map-layer src="img/CottonProduction_1890_v2_2304.png" />
-	<paraf-map-layer src="img/CottonProduction_1900_v2_2304.png" />
-
-	<paraf-step-label value="1860" />
-	<paraf-step-label value="1870" />
-	<paraf-step-label value="1880" />
-	<paraf-step-label value="1890" />
-	<paraf-step-label value="1900" />
-      </div>
-      </paraf-map>
-    </article>
-  </div>
-
-  <div class="col-xs-2 row cottonseed-prod-legend" id="map-legend">
-    <div class="row">
-      <div class="col-xs-12">
-	<h3>Cottonseed Oil Crushing Mills</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-2 cottonseed-prod-class">
-	<div class="cottonseed-prod-mills-1"></div>
-      </div>
-      <div class="col-xs-10">1 Mill</div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-2 cottonseed-prod-class">
-	<div class="cottonseed-prod-mills-3"></div>
-	</div>
-      <div class="col-xs-10">3 Mills</div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12">
-	<h3>Cotton Production in 500 lb. bales</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-2 cottonseed-prod-class cottonseed-prod-bales">
-	<div class="cottonseed-prod-bales-dot"></div>
-	
-      </div>
-      <div class="col-xs-10">1 Dot = 1,000 bales</div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-2 cottonseed-prod-class cottonseed-prod-railroads">
-	<div class="cottonseed-prod-railroads-track"></div>
-      </div>
-      <div class="col-xs-10">Principal Railroads</div>
-    </div>
-
-  </div><!-- /#map-legend -->
-
-</div>
-
-<div class="container-fluid row">
-  <div class="col-xs-12">
-
-    <div class="container-fluid row time-slider-container">
-      <div class="col-xs-1">
-	<button id="prev-step" class="glyphicon glyphicon-play btn btn-default" type="button" ng-click="animate($event)"></button>
-      </div>
-      <div class="col-xs-1">
-	<button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
-      </div>
-      <div class="col-xs-9">
-	<input type="text" class="" value="" id="input-time-slider" />
-      </div>
-      <div class="col-xs-1">
-	<button id="next-step" class="glyphicon glyphicon-forward btn btn-default" type="button" ng-click="nextLayer()"></button>
-      </div>
-      <div class="time-slider-esri"></div>
-    </div>
-
-    <div class="container-fluid">
+  <div class="container-fluid row">
+    <div class="col-xs-10">
       <article>
-	<div class="container-fluid">
-	  <p>These maps illustrate the changing geography of cottonseed oil. In the postbellum period, cotton growers began to crush their formerly discarded cottonseeds to collect oil.  The organic oil was then used to mix (adulterate) olive oil in the Mediterranean and to blend with lard (pig fat) from meatpackers in the Midwest.  Crushing seeds was a new industry. It used a byproduct of the cotton empire to generate a new market.  It also furthered the reliance on cotton as a staple crop in the South and Texas.</p>
-	  <p>The two layers of the maps show two features changing over time. One is the growth of cotton production; the second is the rise of the cottonseed oil crushing industry. As the legend notes, each green dot represents 1000 bales of cotton, while the size of the red dot indicates how many crushing mills each state had.</p>
-	  <p>The crushing industry was nearly non-existent in 1860. It grew to mills in the dozens in the 1870s and then in the several hundreds by the early 1900s. By that point, cottonseed oil was a common component in the consumer product market. Shortening, meatpacking, and grocers’ companies—like N.K. Fairbanks’ Cottolene and Proctor and Gamble’s Crisco— developed new markets built on the regular supply of the organic oil from the South. The purpose of the maps is to show the geographical path of cottonseed oil in relation to the growth of cotton production itself. These maps help illustrate a new layer of southern economy with the rise of the oil by-product industry.</p>
-	  <p>Sources: <i>Bureau of the U.S. Census,</i> 1860, 1870, 1880, 1900; <i>Manufacturers’ Record,</i> 1887, 1916; <i>Oil, Paint, and Drug Reporter</i>.</p>
-	</div>
+        <paraf-map time-steps="5">
+          <div class="container-fluid">
+            <div id="cottonseed-production-map" class="map">
+              <img src="{{ currentLayer.src }}" />
+            </div>
+
+            <paraf-map-layer src="img/CottonProduction_1860_v3.jpg" />
+            <paraf-map-layer src="img/CottonProduction_1870_v3.jpg" />
+            <paraf-map-layer src="img/CottonProduction_1880_v3.jpg" />
+            <paraf-map-layer src="img/CottonProduction_1890_v3.jpg" />
+            <paraf-map-layer src="img/CottonProduction_1900_v3.jpg" />
+
+            <paraf-step-label value="1860" />
+            <paraf-step-label value="1870" />
+            <paraf-step-label value="1880" />
+            <paraf-step-label value="1890" />
+            <paraf-step-label value="1900" />
+          </div>
+        </paraf-map>
       </article>
     </div>
+
+    <div class="col-xs-2 row cottonseed-prod-legend" id="map-legend">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Cottonseed Oil Crushing Mills</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-2 cottonseed-prod-class">
+          <div class="cottonseed-prod-mills-1"></div>
+        </div>
+        <div class="col-xs-10">1 Mill</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-2 cottonseed-prod-class">
+          <div class="cottonseed-prod-mills-3"></div>
+        </div>
+        <div class="col-xs-10">3 Mills</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Cotton Production in 500 lb. bales</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-2 cottonseed-prod-class cottonseed-prod-bales">
+          <div class="cottonseed-prod-bales-dot"></div>
+        </div>
+        <div class="col-xs-10">1 Dot = 1,000 bales</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-2 cottonseed-prod-class cottonseed-prod-railroads">
+          <div class="cottonseed-prod-railroads-track"></div>
+        </div>
+        <div class="col-xs-10">Principal Railroads</div>
+      </div>
+    </div><!-- /#map-legend -->
   </div>
 
+  <div class="container-fluid row">
+    <div class="col-xs-12">
+      <div class="container-fluid row time-slider-container">
+        <div class="col-xs-1">
+          <button
+            id="prev-step"
+            class="glyphicon glyphicon-play btn btn-default"
+            type="button"
+            ng-click="animate($event)"
+          ></button>
+        </div>
+        <div class="col-xs-1">
+          <button id="prev-step" class="glyphicon glyphicon-backward btn btn-default" type="button" ng-click="prevLayer()"></button>
+        </div>
+        <div class="col-xs-9">
+          <input type="text" class="" value="" id="input-time-slider" />
+        </div>
+        <div class="col-xs-1">
+          <button
+            id="next-step"
+            class="glyphicon glyphicon-forward btn btn-default"
+            type="button"
+            ng-click="nextLayer()"
+          ></button>
+        </div>
+        <div class="time-slider-esri"></div>
+      </div>
 
-
-</div>
+      <div class="container-fluid">
+        <article>
+          <div class="container-fluid">
+            <p>These maps illustrate the changing geography of cottonseed oil. In the postbellum period, cotton growers began to crush their formerly discarded cottonseeds to collect oil.  The organic oil was then used to mix (adulterate) olive oil in the Mediterranean and to blend with lard (pig fat) from meatpackers in the Midwest.  Crushing seeds was a new industry. It used a byproduct of the cotton empire to generate a new market.  It also furthered the reliance on cotton as a staple crop in the South and Texas.</p>
+            <p>The two layers of the maps show two features changing over time. One is the growth of cotton production; the second is the rise of the cottonseed oil crushing industry. As the legend notes, each green dot represents 1000 bales of cotton, while the size of the red dot indicates how many crushing mills each state had.</p>
+            <p>The crushing industry was nearly non-existent in 1860. It grew to mills in the dozens in the 1870s and then in the several hundreds by the early 1900s. By that point, cottonseed oil was a common component in the consumer product market. Shortening, meatpacking, and grocers’ companies—like N.K. Fairbanks’ Cottolene and Proctor and Gamble’s Crisco— developed new markets built on the regular supply of the organic oil from the South. The purpose of the maps is to show the geographical path of cottonseed oil in relation to the growth of cotton production itself. These maps help illustrate a new layer of southern economy with the rise of the oil by-product industry.</p>
+            <p>Sources: <i>Bureau of the U.S. Census,</i> 1860, 1870, 1880, 1900; <i>Manufacturers’ Record,</i> 1887, 1916; <i>Oil, Paint, and Drug Reporter</i>.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
 
 </section>
