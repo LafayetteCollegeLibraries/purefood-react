@@ -97,7 +97,8 @@
     "thumbnail": {
       "image": "Providence_1881_640_800.png",
       "caption": "Walling, H.F. <i>Map of the City of Providence</i>. 1881. (Norman B. Leventhal Map Center, Boston Public Library)"
-    }
+    },
+    "map": "ParafTravels_Providence_960_arrow.png"
   },
 
   {
@@ -179,6 +180,7 @@
   {
     "year": "1879",
     "title": "1879-1885",
+    "location": "Valdivia",
     "content": "Although he received a five-year sentence for violating laws of public trust, forgery and falsification, he remained incarcerated for six until his death of pneumonia in 1885.",
     "thumbnail": {
       "image": "Valdivia_1884_640_447.png",
