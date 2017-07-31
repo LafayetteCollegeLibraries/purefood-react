@@ -1,11 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-const App = () => (
-  <div>
-    <h1>Hey!</h1>
-    <p>Welcome to your new React app!</p>
-  </div>
+import { BrowserRouter } from 'react-router-dom'
+import App from './screens/App'
+
+const Wrapped = (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 )
 
-render(<App />, document.querySelector('#app'))
+render(Wrapped, document.querySelector('#app'))
