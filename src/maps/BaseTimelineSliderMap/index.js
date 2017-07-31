@@ -22,6 +22,16 @@ class BaseTimelineSliderMap extends React.PureComponent {
     }
   }
 
+  getCurrentData () {
+    const timeline = this.getTimeline()
+    
+    if (!timeline) {
+      return null
+    }
+
+    return timeline[this.state.currentStep]
+  }
+
   // override this method with one that returns the data for each timeline
   getTimeline () {
     return null

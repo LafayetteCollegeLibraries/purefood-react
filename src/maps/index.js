@@ -1,5 +1,6 @@
 import ParafsItinerary from './ParafsItinerary'
 import MargarineLegislation from './MargarineLegislation'
+import MargarineProduction from './MargarineProduction'
 
 export default [
   {
@@ -12,10 +13,11 @@ export default [
     title: 'Oleomargarine Legislation',
     component: MargarineLegislation,
   },
-  // {
-  //   url: '/margarine-production',
-  //   title: 'Butter and Oleomargarine Production',
-  // },
+  {
+    url: '/margarine-production',
+    title: 'Butter and Oleomargarine Production',
+    component: MargarineProduction,
+  },
   // {
   //   url: '/cottonseed-production',
   //   title: 'Cottonseed Oil Production',
