@@ -1,76 +1,14 @@
 import React from 'react'
+import BaseTimelineSliderMap from '../BaseTimelineSliderMap'
 import PropTypes from 'prop-types'
 import timeline from './timeline.json'
 
 import EventContent from './EventContent'
 import Slider from '../../components/TimelineSlider'
 
-const SLIDESHOW_RATE = 2500
-let SLIDESHOW_INTERVAL
-
-class ParafsItinerary extends React.PureComponent {
-  constructor (props) {
-    super(props)
-
-    this.handleChangeTimelineStep = this.handleChangeTimelineStep.bind(this)
-    this.renderTimelineSlider = this.renderTimelineSlider.bind(this)
-
-    this.handleTogglePlay = this.handleTogglePlay.bind(this)
-    this.togglePause = this.togglePause.bind(this)
-    this.togglePlay = this.togglePlay.bind(this)
-
-    this.state = {
-      currentStep: 0,
-      playing: false,
-    }
-  }
-
-  handleChangeTimelineStep (value) {
-    this.setState({currentStep: value})
-  }
-
-  handleTogglePlay () {
-    console.log('handleTogglePlay')
-    if (SLIDESHOW_INTERVAL && this.state.playing) {
-      return this.togglePause()
-    }
-
-    return this.togglePlay()
-  }
-
-  togglePause () {
-    console.log('toggling pause')
-    clearInterval(SLIDESHOW_INTERVAL)
-    this.setState({playing: false})
-  }
-
-  togglePlay() {
-    console.log('toggling play')
-    SLIDESHOW_INTERVAL = setInterval(() => {
-      const { currentStep } = this.state
-      let nextStep = currentStep + 1
-
-      if (nextStep >= timeline.length) {
-        return this.togglePause()
-      }
-
-      this.setState({currentStep: nextStep})
-    }, SLIDESHOW_RATE)
-  }
-
-  renderTimelineSlider () {
-    const { currentStep, playing } = this.state
-
-    return (
-      <Slider
-        data={timeline}
-        onChange={this.handleChangeTimelineStep}
-        onTogglePlay={this.handleTogglePlay}
-        orientation="horizontal"
-        playing={playing}
-        value={currentStep}
-      />
-    )
+class ParafsItinerary extends BaseTimelineSliderMap {
+  getTimeline () {
+    return timeline
   }
 
   render () {
