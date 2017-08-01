@@ -9,42 +9,42 @@ import OilExports from './OilExports'
 
 export default [
   {
-    url: '/paraf',
+    path: '/paraf',
     title: "Paraf's Itinerary",
     component: ParafsItinerary,
   },
   {
-    url: '/margarine-legislation',
+    path: '/margarine-legislation',
     title: 'Oleomargarine Legislation',
     component: MargarineLegislation,
   },
   {
-    url: '/margarine-production',
+    path: '/margarine-production',
     title: 'Butter and Oleomargarine Production',
     component: MargarineProduction,
   },
   {
-    url: '/cottonseed-production',
+    path: '/cottonseed-production',
     title: 'Cottonseed Oil Production',
     component: CottonseedProduction,
   },
   {
-    url: '/cottonseed-exports',
+    path: '/cottonseed-exports',
     title: 'Cottonseed Oil Exports',
     component: CottonseedExports,
   },
   {
-    url: '/glucose-exports',
+    path: '/glucose-exports',
     title: 'Glucose Exports',
     component: GlucoseExports,
   },
   {
-    url: '/margarine-exports',
+    path: '/margarine-exports',
     title: 'Oleomargarine Exports',
     component: MargarineExports,
   },
   {
-    url: '/oil-exports',
+    path: '/oil-exports',
     title: 'Oleo Oil Exports',
     component: OilExports,
   },

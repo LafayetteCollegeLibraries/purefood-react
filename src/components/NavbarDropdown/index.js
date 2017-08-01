@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const propTypes = {
   links: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
   })),
 }
 
@@ -57,7 +57,7 @@ class NavbarDropdown extends React.PureComponent {
       <ul aria-labelledby={ariaName} className="dropdown-menu">
         {links.map((link, idx) => (
           <li key={`${ariaName}-link-${idx}`}>
-            <Link to={link.url}>{link.title}</Link>
+            <Link to={link.path}>{link.title}</Link>
           </li>
         ))}
       </ul>

@@ -1,6 +1,6 @@
 import React from 'react'
-import NavbarLink from '../../components/NavbarLink'
-import NavbarDropdown from '../../components/NavbarDropdown'
+import NavbarLink from '../NavbarLink'
+import NavbarDropdown from '../NavbarDropdown'
 
 export default class Navbar extends React.PureComponent {
   render () {
