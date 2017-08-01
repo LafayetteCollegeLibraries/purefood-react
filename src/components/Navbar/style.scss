@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+
+.navbar-brand {
+  height: 64px;
+  padding: 8px;
+
+  img {
+    height: 48px;
+  }
+}
+
+#navbar-menu {
+  height: 64px;
+
+  li {
+    padding-left: 2px;
+    padding-right: 2px;
+
+    a {
+      text-align: center;
+      height: 64px;
+      font-size: 1.2em;
+      color: $white;
+      line-height: 42px;
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import React from 'react'
 import WrappedRoute from '../../components/WrappedRoute'
-import HeaderContainer from '../../components/HeaderContainer'
-import Navbar from '../../components/Navbar'
+import NavContainer from '../../components/NavContainer'
 
 import maps from '../../maps'
 import screens from '../routes'
@@ -12,9 +11,8 @@ const routes = [].concat(maps, screens)
 
 const App = () => (
   <div>
-    <HeaderContainer />
-    <Navbar key="navbar" mapPages={maps} />
-
+    <NavContainer mapPages={maps} />
+    
     {routes.map(routeData => (
       <WrappedRoute
         key={routeData.path}
