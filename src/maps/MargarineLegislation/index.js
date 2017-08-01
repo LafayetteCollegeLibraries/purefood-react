@@ -20,7 +20,7 @@ class MargarineLegislation extends BaseTimelineSliderMap {
     return (
       <article>
         <div className="container-fluid row" key="map-container">
-          <div className="col-xs-10">
+          <div className="col-xs-10 map">
             <img src={`/img/${data.map}`} />
           </div>
 

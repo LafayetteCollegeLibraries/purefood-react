@@ -1,0 +1,10 @@
+{
+  "mills": [
+    { "color": "#d95f02", "width": "12px", "text": "1 Mill" },
+    { "color": "#d95f02", "width": "18px", "text": "3 Mills" }
+  ],
+
+  "cotton": [
+    { "color": "#1b9e77", "width": "4px", "text": "1 Dot = 1,000 bales" }
+  ]
+}

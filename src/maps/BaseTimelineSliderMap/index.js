@@ -82,6 +82,11 @@ class BaseTimelineSliderMap extends React.PureComponent {
       }
 
       this.setState({currentStep: nextStep})
+
+      // don't wait until the last iteration +1 to trigger the pause
+      if (nextStep + 1 === timeline.length) {
+        this.togglePause()
+      }
     }, this._slideshowRate)
   }
 
