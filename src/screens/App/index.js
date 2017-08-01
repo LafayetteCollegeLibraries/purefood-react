@@ -2,6 +2,8 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import Navbar from '../../containers/Navbar'
 
+import TableOfContents from '../TableOfContents'
+
 import pages from '../../maps'
 
 import '../../scss/main.scss'
@@ -17,6 +19,8 @@ const App = () => (
         title={page.title}
       />
     ))}
+
+    <Route path="/chapters" component={TableOfContents} />
   </div>
 )
 
