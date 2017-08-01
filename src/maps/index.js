@@ -3,6 +3,7 @@ import MargarineLegislation from './MargarineLegislation'
 import MargarineProduction from './MargarineProduction'
 import CottonseedProduction from './CottonseedProduction'
 import CottonseedExports from './CottonseedExports'
+import GlucoseExports from './GlucoseExports'
 
 export default [
   {
@@ -30,10 +31,11 @@ export default [
     title: 'Cottonseed Oil Exports',
     component: CottonseedExports,
   },
-  // {
-  //   url: '/glucose-exports',
-  //   title: 'Glucose Exports',
-  // },
+  {
+    url: '/glucose-exports',
+    title: 'Glucose Exports',
+    component: GlucoseExports,
+  },
   // {
   //   url: '/margarine-exports',
   //   title: 'Oleomargarine Exports',
