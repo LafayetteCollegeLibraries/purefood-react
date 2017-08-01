@@ -74,7 +74,7 @@ class TimelineSlider extends React.PureComponent {
         <button
           type="button"
           className={`glyphicon btn btn-default glyphicon-${whichIcon}`}
-          onClick={onClick}
+          onClick={() => onClick() }
           disabled={disabled}
         />
       </div>

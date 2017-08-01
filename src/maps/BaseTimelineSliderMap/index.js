@@ -2,12 +2,14 @@
 import React from 'react'
 import Slider from '../../components/TimelineSlider'
 
+export const BASE_SLIDESHOW_RATE = 2000
+
 class BaseTimelineSliderMap extends React.PureComponent {
   constructor (props) {
     super(props)
 
     this._slideshowInteral = null
-    this._slideshowRate = props.slideshowRate || 2500
+    this._slideshowRate = props.slideshowRate || BASE_SLIDESHOW_RATE
 
     this.getTimeline = this.getTimeline.bind(this)
     this.handleChangeTimelineStep = this.handleChangeTimelineStep.bind(this)
@@ -38,6 +40,7 @@ class BaseTimelineSliderMap extends React.PureComponent {
   }
 
   handleChangeTimelineStep (value) {
+    const { currentStep } = this.state
     this.setState({currentStep: value})
   }
 
@@ -71,7 +74,11 @@ class BaseTimelineSliderMap extends React.PureComponent {
 
   togglePlay () {
     const timeline = this.getTimeline()
-    this.setState({playing: true})
+    const startIndex = (this.state.currentStep + 1) === timeline.length 
+      ? 0
+      : this.state.currentStep
+
+    this.setState({playing: true, currentStep: startIndex})
 
     this._slideshowInteral = setInterval(() => {
       const { currentStep } = this.state
@@ -81,7 +88,7 @@ class BaseTimelineSliderMap extends React.PureComponent {
         return this.togglePause()
       }
 
-      this.setState({currentStep: nextStep})
+      this.handleChangeTimelineStep(nextStep)
 
       // don't wait until the last iteration +1 to trigger the pause
       if (nextStep + 1 === timeline.length) {
