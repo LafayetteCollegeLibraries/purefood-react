@@ -12,6 +12,10 @@ class MargarineProduction extends BaseTimelineSliderMap {
   render () {
     const data = this.getCurrentData()
 
+    if (data === null) {
+      return null
+    }
+
     return (
       <article>
         <div className="container-fluid row" key="map-container">
@@ -19,7 +23,7 @@ class MargarineProduction extends BaseTimelineSliderMap {
             <img src={`/img/${data.map}`} />
           </div>
 
-          <div className="col-xs-2">
+          <div className="col-xs-2 map-legend-container">
             <div className="row">
               <img src="/img/OleoProd_legend_normal.png" />
             </div>

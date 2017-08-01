@@ -11,7 +11,12 @@ class MargarineLegislation extends BaseTimelineSliderMap {
   }
 
   render () {
-    const data = timeline[this.state.currentStep]
+    const data = this.getCurrentData()
+
+    if (data === null) {
+      return null
+    }
+
     return (
       <article>
         <div className="container-fluid row" key="map-container">

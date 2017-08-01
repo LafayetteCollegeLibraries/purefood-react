@@ -13,7 +13,12 @@ class ParafsItinerary extends BaseTimelineSliderMap {
 
   render () {
     const { currentStep } = this.state
-    const data = timeline[currentStep]
+    const data = this.getCurrentData()
+
+    if (data === null) {
+      return null
+    }
+
     const title = data.location
 
     return (

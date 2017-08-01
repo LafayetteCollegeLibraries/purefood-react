@@ -4,6 +4,8 @@ import Navbar from '../../containers/Navbar'
 
 import pages from '../../maps'
 
+import '../../scss/main.scss'
+
 const App = () => (
   <div>
     <Navbar key="navbar" mapPages={pages} />
