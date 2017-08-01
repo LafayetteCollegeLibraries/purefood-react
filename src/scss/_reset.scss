@@ -1,0 +1,30 @@
+/**
+ * Body
+ */
+body {
+  padding-top: 20px;
+  background-color: $body-background-color;
+  color: $black;
+}
+
+a {
+  color: $link-color;
+
+  &:hover, &:focus {
+    color: $link-hover-color;
+  }
+}
+
+#main h1 {
+  color: $main-heading-color;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+}
