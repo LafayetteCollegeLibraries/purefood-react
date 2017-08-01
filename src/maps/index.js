@@ -5,6 +5,7 @@ import CottonseedProduction from './CottonseedProduction'
 import CottonseedExports from './CottonseedExports'
 import GlucoseExports from './GlucoseExports'
 import MargarineExports from './MargarineExports'
+import OilExports from './OilExports'
 
 export default [
   {
@@ -42,8 +43,9 @@ export default [
     title: 'Oleomargarine Exports',
     component: MargarineExports,
   },
-  // {
-  //   url: '/oil-exports',
-  //   title: 'Oleo Oil Exports',
-  // },
+  {
+    url: '/oil-exports',
+    title: 'Oleo Oil Exports',
+    component: OilExports,
+  },
 ]
