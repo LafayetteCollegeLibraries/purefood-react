@@ -26,14 +26,24 @@ class NavbarDropdown extends React.PureComponent {
     }
   }
 
-  maybeCloseDropdown (ev) {
-    if (ev && ev.target) {
-      if (!ev.target.dataset['dropdown-toggle']) {
-        if (this.state.isOpen) {
-          return this.toggleDropdown(true)
-        }
+  componentWillMount () {
+    document.addEventListener('click', this.maybeCloseDropdown, true)
+  }
 
-        this.toggleDropdown()
+  componentWillUnmount () {
+    document.removeEventListener('click', this.maybeCloseDropdown, true)
+  }
+
+  maybeCloseDropdown (ev) {
+    const { isOpen } = this.state
+
+    if (ev && ev.target) {
+      const { dataset } = ev.target
+
+      if (!dataset['toggle']) {
+        if (isOpen) {
+          return this.toggleDropdown(false)
+        }
       }
     }
   }
@@ -64,9 +74,9 @@ class NavbarDropdown extends React.PureComponent {
     )
   }
 
-  toggleDropdown () {
+  toggleDropdown (isOpen) {
     this.setState(prevState => ({
-      isOpen: !prevState.isOpen,
+      isOpen: isOpen === undefined ? !prevState.isOpen : isOpen,
     }))
   }
 
@@ -81,18 +91,21 @@ class NavbarDropdown extends React.PureComponent {
     return (
       <li
         className={className.join(' ')}
-        data-dropdown="true"
-        onClick={this.toggleDropdown}
+        data-toggle="dropdown"
         style={{cursor: 'pointer'}}
       >
         <a
           aria-expanded={this.state.isOpen}
           aria-haspopup="true"
           className="dropdown-toggle"
+          onClick={this.toggleDropdown}
           data-toggle="dropdown"
         >
           {this.props.children}
+
+          { /* <i className="glyphicon-arrow-down" /> */ }
         </a>
+
 
         {this.maybeRenderDropdown()}
       </li>

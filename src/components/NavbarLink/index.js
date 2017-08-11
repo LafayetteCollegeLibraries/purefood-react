@@ -6,8 +6,8 @@ const propTypes = {
   to: PropTypes.string.isRequired,
 }
 
-const NavbarLink = ({to, children}) => (
-  <li className="col-xs-3">
+const NavbarLink = ({to, children, ...rest}) => (
+  <li className="col-xs-3" { ...rest }>
     <Link to={to}>{children}</Link>
   </li>
 )
