@@ -19,6 +19,7 @@
     "url": "https://github.com/LafayetteCollegeLibraries/ng-purefood"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
