@@ -1,5 +1,77 @@
 @import "../../scss/variables";
 
+#navbar {
+  $navbar-item-color: $white;
+  $navbar-item-hover-color: #222;
+
+  background-image: linear-gradient(to bottom, #545454, #333333);
+  border: medium none;
+  border-radius: 0;
+
+  // maybe #navbar-menu items should be in /src/components/NavbarLink?
+  &-menu {
+    height: 64px;
+
+    li {
+      padding-left: 2px;
+      padding-right: 2px;
+
+      &.open {
+        > a {
+          color: $navbar-item-hover-color;
+        }
+      }
+
+      a {
+        text-align: center;
+        height: 64px;
+        font-size: 1.2em;
+        color: $navbar-item-color;
+        line-height: 42px;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: $navbar-item-hover-color;
+        }
+      }
+
+      .dropdown-menu {
+        background-color: #222;
+        margin-top: 0px;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &-share-auth {
+    li {
+      display: inline-block;
+      text-align: center;
+      width: 50%;
+
+      a {
+        color: #ddd;
+        padding: 6px 6px;
+      }
+
+      img {
+        max-height: 32px;
+      }
+    }
+  }
+}
+
+#share {
+  float: right;
+  
+  ul li {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+  }
+}
+    
 .navbar-brand {
   height: 64px;
   padding: 8px;
@@ -9,19 +81,6 @@
   }
 }
 
-#navbar-menu {
-  height: 64px;
-
-  li {
-    padding-left: 2px;
-    padding-right: 2px;
-
-    a {
-      text-align: center;
-      height: 64px;
-      font-size: 1.2em;
-      color: $white;
-      line-height: 42px;
-    }
-  }
+.navbar-header {
+  float: inherit;
 }
