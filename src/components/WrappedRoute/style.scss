@@ -1,0 +1,31 @@
+#title .container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-pills > li > a {
+  background-color: #ffffff;
+}
+
+#content {
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding: 4px 8px;
+
+  .container-fluid {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+#breadcrumbs {
+  font-weight: inherit;
+}
+
+#notes {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: smaller;
+}

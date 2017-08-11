@@ -1,5 +1,15 @@
 .Chapter {
   h2 small {
-    margin-left: .5rem;
+    // align the chapter title over the chapter content
+    margin-left: 2rem;
   }
+}
+
+// bootstrap fixes
+.media-body, .media-left, .media-right {
+  display: table-cell;
+  vertical-align: top;
+}
+.media-left, .media > .pull-left {
+  padding-right: 10px;
 }

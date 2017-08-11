@@ -3,6 +3,8 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Breadcrumbs from '../Breadcrumbs'
 
+import './style.scss'
+
 const WrappedRoute = ({component: Component, title, ...rest}) => (
   <Route {...rest} render={props => (
     <div className="container-fluid">

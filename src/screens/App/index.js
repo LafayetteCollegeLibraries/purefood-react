@@ -10,7 +10,7 @@ import '../../scss/main.scss'
 const routes = [].concat(maps, screens)
 
 const App = () => (
-  <div>
+  <div id="main">
     <NavContainer mapPages={maps} />
     
     {routes.map(routeData => (
