@@ -6,6 +6,7 @@ import Home from './Home'
 import TableOfContents from './TableOfContents'
 import Notes from './Notes'
 import Copyright from './Copyright'
+import Contact from './Contact'
 
 const screens = [
   {
@@ -27,6 +28,11 @@ const screens = [
     path: '/copyright',
     title: 'Copyright',
     component: Copyright,
+  },
+  {
+    path: '/contact',
+    title: 'Contact Us',
+    component: Contact,
   }
 ]
 
