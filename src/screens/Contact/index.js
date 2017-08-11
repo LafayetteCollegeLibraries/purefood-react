@@ -16,60 +16,63 @@ const Contact = () => (
         <div className="form-group">
           <label htmlFor="name">
             Your Name
-
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              placeholder="name"
-              required="true"
-              size="60"
-              maxLength="128"
-            />
           </label>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            placeholder="name"
+            required="true"
+            size="60"
+            maxLength="128"
+          />
         </div>
 
         <div className="form-group">
           <label htmlFor="email">
             Your E-Mail Address
-
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              placeholder="E-Mail Address"
-              name="email"
-              required="true"
-              size="60"
-            />
           </label>
+
+          <input
+            type="email"
+            className="form-control"
+            id="email"
+            placeholder="E-Mail Address"
+            name="email"
+            required="true"
+            size="60"
+          />
         </div>
 
         <div className="form-group">
           <label htmlFor="subject">
-            <input
-              type="subject"
-              className="form-control"
-              id="subject"
-              placeholder="Subject"
-              name="subject"
-              required="true"
-              size="60"
-            />
+            Subject
           </label>
+
+          <input
+            type="subject"
+            className="form-control"
+            id="subject"
+            placeholder="Subject"
+            name="subject"
+            required="true"
+            size="60"
+          />
+
         </div>
 
         <div className="form-group">
           <label htmlFor="message">
-            <textarea
-              className="form-textarea"
-              cols="60"
-              id="message"
-              name="message"
-              required="true"
-              rows="5"
-            ></textarea>
+            Message
           </label>
+
+          <textarea
+            className="form-control"
+            id="message"
+            name="message"
+            required="true"
+            rows="5"
+          ></textarea>
         </div>
 
         <input
