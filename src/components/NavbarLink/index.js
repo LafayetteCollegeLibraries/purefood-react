@@ -7,7 +7,7 @@ const propTypes = {
 }
 
 const NavbarLink = ({to, children, ...rest}) => (
-  <li className="col-xs-3" { ...rest }>
+  <li { ...rest }>
     <Link to={to}>{children}</Link>
   </li>
 )

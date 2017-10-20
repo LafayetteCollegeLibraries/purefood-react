@@ -65,11 +65,11 @@ class NavbarDropdown extends React.PureComponent {
 
     return (
       <ul aria-labelledby={ariaName} className="dropdown-menu">
-        {links.map((link, idx) => (
+        {links ? links.map((link, idx) => (
           <li key={`${ariaName}-link-${idx}`}>
             <Link to={link.path}>{link.title}</Link>
           </li>
-        ))}
+        )) : this.props.children}
       </ul>
     )
   }
@@ -83,13 +83,20 @@ class NavbarDropdown extends React.PureComponent {
   render () {
     const { isOpen } = this.state
     const className = ['dropdown', 'col-xs-3']
+    const { links, showArrow, ...rest } = this.props
 
     if (isOpen) {
       className.push('open')
     }
 
+    if (rest.className) {
+      className.push(rest.className)
+      delete rest.className
+    }
+
     return (
       <li
+        {...rest}
         className={className.join(' ')}
         data-toggle="dropdown"
         style={{cursor: 'pointer'}}
@@ -101,9 +108,9 @@ class NavbarDropdown extends React.PureComponent {
           onClick={this.toggleDropdown}
           data-toggle="dropdown"
         >
-          {this.props.children}
+          {this.props.label}
 
-          { /* <i className="glyphicon-arrow-down" /> */ }
+          { showArrow ? <i className="glyphicon-arrow-down" /> : null }
         </a>
 
 

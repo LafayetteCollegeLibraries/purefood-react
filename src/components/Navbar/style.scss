@@ -4,9 +4,11 @@
   $navbar-item-color: $white;
   $navbar-item-hover-color: #222;
 
-  background-image: linear-gradient(to bottom, #545454, #333333);
-  border: medium none;
-  border-radius: 0;
+  &-container {
+    background-image: linear-gradient(to bottom, #545454, #333333);
+    border: medium none;
+    border-radius: 0;
+  }
 
   // maybe #navbar-menu items should be in /src/components/NavbarLink?
   &-menu {
