@@ -19,10 +19,6 @@ const WrappedRoute = ({component: Component, title, ...rest}) => (
 
           <ul className="nav nav-pills pull-right">
             <li role="presentation">
-              <Link to="/contact">Contact Us</Link>
-            </li>
-
-            <li role="presentation">
               <Link to="/copyright">Copyright</Link>
             </li>
           </ul>

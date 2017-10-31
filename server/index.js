@@ -11,8 +11,4 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
-app.post('/contact', function (req, res) {
-  console.log(req.body)
-})
-
 app.listen(8081)
