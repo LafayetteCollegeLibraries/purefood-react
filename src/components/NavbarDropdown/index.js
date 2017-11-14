@@ -26,12 +26,18 @@ class NavbarDropdown extends React.PureComponent {
     }
   }
 
-  componentWillMount () {
-    document.addEventListener('click', this.maybeCloseDropdown, true)
-  }
-
-  componentWillUnmount () {
-    document.removeEventListener('click', this.maybeCloseDropdown, true)
+  getArrow () {
+    return (
+      <svg
+        width="7"
+        height="7"
+        viewBox="0 0 10 10"
+        version="1.1"
+        style={{marginLeft: '10px', verticalAlign: 'middle'}}
+      >
+        <path d="M0,0L5,10L10,0" />
+      </svg>
+    )
   }
 
   maybeCloseDropdown (ev) {
@@ -67,23 +73,25 @@ class NavbarDropdown extends React.PureComponent {
       <ul aria-labelledby={ariaName} className="dropdown-menu">
         {links ? links.map((link, idx) => (
           <li key={`${ariaName}-link-${idx}`}>
-            <Link to={link.path}>{link.title}</Link>
+            <a href={link.path}>
+              {link.title}
+            </a>
           </li>
         )) : this.props.children}
       </ul>
     )
   }
 
-  toggleDropdown (isOpen) {
+  toggleDropdown () {
     this.setState(prevState => ({
-      isOpen: isOpen === undefined ? !prevState.isOpen : isOpen,
+      isOpen: !prevState.isOpen,
     }))
   }
 
   render () {
     const { isOpen } = this.state
     const className = ['dropdown', 'col-xs-3']
-    const { links, showArrow, ...rest } = this.props
+    const { links, showArrow, label, ...rest } = this.props
 
     if (isOpen) {
       className.push('open')
@@ -100,19 +108,19 @@ class NavbarDropdown extends React.PureComponent {
         className={className.join(' ')}
         data-toggle="dropdown"
         style={{cursor: 'pointer'}}
+        onMouseEnter={this.toggleDropdown}
+        onMouseLeave={this.toggleDropdown}
       >
         <a
           aria-expanded={this.state.isOpen}
           aria-haspopup="true"
           className="dropdown-toggle"
-          onClick={this.toggleDropdown}
           data-toggle="dropdown"
         >
           {this.props.label}
 
-          { showArrow ? <i className="glyphicon-arrow-down" /> : null }
+          { showArrow ? this.getArrow() : null }
         </a>
-
 
         {this.maybeRenderDropdown()}
       </li>

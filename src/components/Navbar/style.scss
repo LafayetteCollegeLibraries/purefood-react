@@ -43,34 +43,20 @@
         margin-top: 0px;
         min-width: 100%;
       }
-    }
-  }
 
-  &-share-auth {
-    li {
-      display: inline-block;
-      text-align: center;
-      width: 50%;
-
-      a {
-        color: #ddd;
-        padding: 6px 6px;
+      .dropdown-toggle path {
+        fill: $navbar-item-color;
+        stroke: none;
       }
 
-      img {
-        max-height: 32px;
+      &:active,
+      &:focus,
+      &:hover {
+        .dropdown-toggle path {
+          fill: $navbar-item-hover-color;
+        }
       }
     }
-  }
-}
-
-#share {
-  float: right;
-  
-  ul li {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
   }
 }
     
