@@ -5,8 +5,6 @@ import NavContainer from '../../components/NavContainer'
 import maps from '../../maps'
 import screens from '../routes'
 
-import '../../scss/main.scss'
-
 const routes = [].concat(maps, screens)
 
 const App = () => (

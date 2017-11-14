@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-bootstrap-slider'
 
-import 'bootstrap-slider/dist/css/bootstrap-slider.min.css'
-import './style.scss'
-
 const propTypes = {
   autoplay: PropTypes.bool,
   data: PropTypes.array,

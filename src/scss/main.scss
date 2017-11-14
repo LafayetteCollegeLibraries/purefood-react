@@ -1,6 +1,18 @@
 @import "variables";
 @import "reset";
 
+// import individual components here instead of relying on
+// webpack to suss them out (this makes server-side compilation
+// a bit easier)
+@import "../components/Chapter/style.scss";
+@import "../components/HeaderContainer/style.scss";
+@import "../components/Navbar/style.scss";
+@import "../components/NavContainer/style.scss";
+@import "bootstrap-slider/dist/css/bootstrap-slider.min.css";
+@import "../components/TimelineSlider/style.scss";
+@import "../components/WrappedRoute/style.scss";
+
+
 // global scss // styles that should eventually find their way into components
 .map img {
   width: 100%;

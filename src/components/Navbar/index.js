@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import NavbarLink from '../NavbarLink'
 import NavbarDropdown from '../NavbarDropdown'
 
-import './style.scss'
-
 const shareLabel = (
   <div>
     <img src="/img/ShareIcon.png" />
