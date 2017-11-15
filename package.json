@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "npm run clean && npm run transpile && npm run pack",
-    "clean": "rimraf build/ public/bundle.js public/css/style.css",
+    "clean": "rimraf build/ public/bundle.js public/bundle.js.map public/css/style.css public/css/style.css.map",
     "dev": "webpack-dev-server",
     "pack": "webpack",
     "server": "node server",
