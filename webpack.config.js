@@ -9,7 +9,7 @@ module.exports = () => {
   const sourceDirectory = isProduction ? 'build' : 'src'
   const pathTo = path.resolve(__dirname, sourceDirectory)
 
-  return {
+  const config = {
     entry: [
       path.join(pathTo, 'index.js'),
       path.join(pathTo, 'scss', 'main.scss'),
@@ -73,4 +73,19 @@ module.exports = () => {
       historyApiFallback: true,
     },
   }
+
+  if (isProduction) {
+    config.devtool = 'source-map'
+    config.plugins = [].concat(
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      }),
+
+      new webpack.optimize.UglifyJsPlugin({sourceMap: true}),
+      
+      config.plugins,
+    )
+  }
+
+  return config
 }

@@ -4,3 +4,4 @@ public/css/style.css
 public/bundle.js
 build/*
 
+*.map

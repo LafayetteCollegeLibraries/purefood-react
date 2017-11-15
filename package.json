@@ -7,9 +7,9 @@
     "build": "npm run clean && npm run transpile && npm run pack",
     "clean": "rimraf build/ public/bundle.js public/css/style.css",
     "dev": "webpack-dev-server",
-    "pack": "NODE_ENV=production webpack --optimize-minimize",
+    "pack": "webpack",
     "server": "node server",
-    "start": "npm run build && npm run server",
+    "start": "export NODE_ENV=\"production\" && npm run build && npm run server",
     "transpile": "babel --copy-files --out-dir build src",
     "test:lint": "eslint src"
   },
@@ -33,9 +33,10 @@
     "url": "https://github.com/LafayetteCollegeLibraries/purefood"
   },
   "dependencies": {
+    "compression": "^1.7.1",
     "express": "^4.15.4",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "react": "^15.6.2",
     "react-bootstrap-slider": "^2.0.0",
     "react-dom": "^15.6.1",
     "react-router": "^4.2.0",

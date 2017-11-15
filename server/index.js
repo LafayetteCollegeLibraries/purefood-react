@@ -1,5 +1,6 @@
 const fs = require('fs')
 const express = require('express')
+const compression = require('compression')
 const path = require('path')
 const React = require('react')
 const render = require('react-dom/server').renderToString
@@ -12,8 +13,14 @@ const pathToIndex = path.join(publicPath, 'index.html')
 const rawIndex = fs.readFileSync(pathToIndex, 'utf8')
 const app = express()
 
+// compress responses
+app.use(compression())
+
+// use <app-route>/public as the static file directory
+// (_not_ serving public/index.html)
 app.use(express.static(publicPath, { index: false }))
 
+// route everything else to our react app, which is rendered server-side first
 app.get('*', function (req, res) {
   const context = {}
   const routerProps = {
