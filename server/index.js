@@ -28,8 +28,8 @@ app.get('*', function (req, res) {
   )
 
   const html = rawIndex.replace(
-    '<div id="app-target"></div>',
-    `<div id="app">${rendered}</div>`
+    '<div id="app" className="container-fluid"></div>',
+    `<div id="app" className="container-fluid">${rendered}</div>`
   )
 
   res.status(context.statusCode || 200)
