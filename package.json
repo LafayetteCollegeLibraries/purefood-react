@@ -14,7 +14,19 @@
   },
   "keywords": [],
   "license": "GPL-3.0",
-  "author": "Adam Malantonio",
+  "contributors": [
+    {
+      "name": "Adam Malantonio",
+      "email": "malantoa@lafayette.edu",
+      "url": "https://github.com/malantonio"
+    },
+    {
+      "name": "Benjamin Cohen"
+    },
+    {
+      "name": "James R. Griffin III"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/LafayetteCollegeLibraries/purefood"
