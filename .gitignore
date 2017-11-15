@@ -1,6 +1,5 @@
 node_modules
 coverage
-public/css/bootstrap.min.css
 public/css/style.css
 public/bundle.js
 build/*
