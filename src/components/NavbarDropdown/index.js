@@ -73,9 +73,9 @@ class NavbarDropdown extends React.PureComponent {
       <ul aria-labelledby={ariaName} className="dropdown-menu">
         {links ? links.map((link, idx) => (
           <li key={`${ariaName}-link-${idx}`}>
-            <a href={link.path}>
+            <Link to={link.path}>
               {link.title}
-            </a>
+            </Link>
           </li>
         )) : this.props.children}
       </ul>
