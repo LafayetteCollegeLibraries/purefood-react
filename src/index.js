@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { render, hydrate } from 'react-dom'
 
 import { BrowserRouter } from 'react-router-dom'
 import App from './screens/App'
@@ -10,4 +10,9 @@ const Wrapped = (
   </BrowserRouter>
 )
 
-render(Wrapped, document.querySelector('#app'))
+const nodeEnv = process.env.NODE_ENV
+const renderFn = nodeEnv && nodeEnv.toLowerCase() === 'production'
+  ? hydrate
+  : render
+
+renderFn(Wrapped, document.querySelector('#app'))

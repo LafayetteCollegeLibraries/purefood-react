@@ -7,7 +7,7 @@
     "build": "npm run clean && npm run transpile && npm run pack",
     "clean": "rimraf build/ public/bundle.js public/css/style.css",
     "dev": "webpack-dev-server",
-    "pack": "webpack",
+    "pack": "NODE_ENV=production webpack",
     "server": "node server",
     "start": "npm run build && npm run server",
     "transpile": "babel --copy-files --out-dir build src",
