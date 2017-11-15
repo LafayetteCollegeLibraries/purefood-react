@@ -34,8 +34,6 @@ app.get('*', function (req, res) {
 
   res.status(context.statusCode || 200)
   res.send(html)
-
-  // res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
 app.listen(8081)
