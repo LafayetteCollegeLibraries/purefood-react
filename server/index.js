@@ -12,7 +12,7 @@ const pathToIndex = path.join(publicPath, 'index.html')
 const rawIndex = fs.readFileSync(pathToIndex, 'utf8')
 const app = express()
 
-app.use(express.static(path.join(__dirname, '..', 'public')))
+app.use(express.static(publicPath, { index: false }))
 
 app.get('*', function (req, res) {
   const context = {}
