@@ -1,0 +1,19 @@
+@import "../../scss/variables";
+
+.HeaderContainer {
+  background-color: $header-container-background-color;
+  background-image: $header-container-background-image;
+  width: 100%;
+
+  h1,
+  h2 {
+    float: right;
+    clear: both;
+  }
+
+  a,
+  a:hover,
+  a:focus {
+    color: $header-container-link-color;
+  }
+}

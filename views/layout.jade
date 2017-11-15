@@ -1,0 +1,94 @@
+doctype html
+html(lang="en")
+  head
+    title Pure Food
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/css/bootstrap-slider.min.css")
+    link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css")
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto" type="text/css" media="all")
+    link(rel='stylesheet', href='css/style.css')
+    script(src='bower_components/jquery/dist/jquery.js')
+    script(src='bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.5/bootstrap-slider.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js")
+    script(src='bower_components/angular/angular.js')
+    script(src='bower_components/angular-animate/angular-animate.js')
+    script(src='bower_components/angular-route/angular-route.js')
+    script(src='bower_components/angular-resource/angular-resource.js')
+    script(src='//code.angularjs.org/1.4.9/angular-sanitize.js')
+    script(src='bower_components/angular-bootstrap/ui-bootstrap-tpls.js')
+    script(src='bower_components/angular-ui-router/release/angular-ui-router.js')
+    script(src='bower_components/angular-drupal/build/angular-drupal.min.js')
+    script(src='app/app.js')
+  body(ng-app='purefood')
+    header
+      nav.navbar.navbar-inverse(role='navigation', ng-controller="NavbarController")
+        #header-container.container-fluid
+          h2
+            a(href="//library.lafayette.edu") Skillman Library at Lafayette College
+          h1
+            a(href="/") Pure Food Project
+        #navbar-container.container-fluid
+          #navbar.navbar-collapse.collapse.row
+            ul.menu.nav.navbar-left.col-xs-2
+              a.navbar-brand.pull-left(href="//digital.lafayette.edu")
+                img(src="img/dss_logo.png")
+            ul#navbar-menu.menu.nav.col-xs-9.row
+              li.col-xs-3
+                a(href="/") Home
+              li.col-xs-3
+                a(href="/#/chapters") Table of Contents
+              li.dropdown.col-xs-3
+                a#map-dropdown.dropdown-toggle(href="#", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", ng-click="override($event)") Maps
+                  span.caret
+                ul.dropdown-menu(aria-labelledby="map-dropdown")
+                  li
+                    a(href="/#/paraf") Paraf's Itinerary
+                  li
+                    a(href="/#/margarine-legislation") Oleomargarine Legislation
+                  li
+                    a(href="/#/margarine-production") Butter and Oleomargarine Production
+                  li
+                    a(href="/#/cottonseed-production") Cottonseed Oil Production
+                  li
+                    a(href="/#/cottonseed-exports") Cottonseed Oil Exports
+                  li
+                    a(href="/#/glucose-exports") Glucose Exports
+                  li
+                    a(href="/#/margarine-exports") Oleomargarine Exports
+                  li
+                    a(href="/#/oil-exports") Oleo Oil Exports
+              li.col-xs-2
+                a(href="/#/notes") Notes
+            ul#navbar-share-auth.menu.nav.navbar-right.col-xs-1
+              li#share.dropdown
+                a#share-dropdown.dropdown-toggle(href="/", data-toggle="dropdown" aria-haspopup="true", aria-expanded="false", ng-click="override($event)")
+                  div
+                    img(src="img/ShareIcon.png")
+                  div
+                    span Share
+                ul.dropdown-menu(aria-labelledby="share-dropdown")
+                  li
+                    .dropdown-header
+                      span Share this Page
+                      button.close(type="button", aria-label="Close")
+                        span(aria-hidden="true")&times;
+                  li.divider(role="separator")
+                  li
+                    span.st_twitter_large(displayText="Twitter")
+                    span Twitter
+                  li
+                    span.st_facebook_large(displayText="Facebook")
+                    span Facebook
+          .navbar-header
+            button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar", aria-expanded="false", aria-controls="navbar")
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+    block content
+    footer.container-fluid
+      include ./includes/footer.jade
+script(type="text/javascript", src="https://ws.sharethis.com/button/buttons.js")
+script(type="text/javascript").
+  stLight.options({publisher: "a2d71de3-6a20-4659-9223-663d3d18c2a5", doNotHash: false, doNotCopy: false, hashAddressBar: false});

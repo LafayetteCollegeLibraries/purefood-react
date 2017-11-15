@@ -1,1 +1,7 @@
-*~
+node_modules
+coverage
+public/css/bootstrap.min.css
+public/bundle.js
+public/styles.css
+build/*
+

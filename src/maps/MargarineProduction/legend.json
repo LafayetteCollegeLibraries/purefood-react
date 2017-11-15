@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/img/butter_prod_class_null.png",
+    "text": "No Data"
+  },
+  {
+    "color": "#ffffe5",
+    "text": "Less than 100,000 lbs."
+  },
+  {
+    "color": "#fff7bc",
+    "text": "100,000 to 30 million lbs."
+  },
+  {
+    "color": "#fee391",
+    "text": "To 60 million lbs."
+  },
+  {
+    "color": "#fec44f",
+    "text": "To 90 million lbs."
+  },
+  {
+    "color": "#fe9929",
+    "text": "Over 90 million lbs."
+  }
+]

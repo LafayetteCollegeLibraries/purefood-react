@@ -1,0 +1,29 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "add-module-exports",
+  ],
+  "ignore": [
+    "**/node_modules/**/*",
+    "**/*.scss"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "istanbul", {
+            "exclude": [
+              "**/test.js",
+              "**/*.test.js"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+  
+}
