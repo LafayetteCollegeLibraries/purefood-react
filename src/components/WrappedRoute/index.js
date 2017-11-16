@@ -1,11 +1,13 @@
 // allows us to wrap a page + display its title
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import Breadcrumbs from '../Breadcrumbs'
 
 const WrappedRoute = ({component: Component, title, html, ...rest}) => (
   <Route {...rest} render={props => (
     <div className="container-fluid">
+      { title && <Helmet><title>{title}</title></Helmet> }
       <section id="title">
         <div className="container-fluid">
           { html 
