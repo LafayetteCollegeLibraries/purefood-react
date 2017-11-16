@@ -44,10 +44,6 @@ const EventContent = props => {
 
   return (
     <div {...containerProps}>
-      <div className="container-fluid" key="location-title">
-        <h3>{location}</h3>
-      </div>
-
       <div key="location-description">
         <div className="container-fluid">
           <h4>{title ? title : year}</h4>
