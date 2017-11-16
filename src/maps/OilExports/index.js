@@ -53,8 +53,7 @@ class OilExports extends BaseTimelineSliderMap {
             trends include a change in destination into the first decade of the
             twentieth century to include expanding markets in Asia, Central
             America, South America, and Africa. Full data sets of the flow
-            paths listing individual nations and quantities are 
-            <Link to="/notes">here</Link>.
+            paths listing individual nations and quantities are <Link to="/notes">here</Link>.
           </p>
 
           <ol id="notes">
