@@ -9,7 +9,9 @@ const HeaderContainer = () => (
       </Link>
     </h2>
     <h1>
-      <Link to="/">Pure Food Project</Link>
+      <Link to="/">
+        <em>Pure Adulteration</em> Digital Companion Site
+      </Link>
     </h1>
   </div>
 )
