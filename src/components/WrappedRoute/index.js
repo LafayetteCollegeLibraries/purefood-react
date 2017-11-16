@@ -3,12 +3,15 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Breadcrumbs from '../Breadcrumbs'
 
-const WrappedRoute = ({component: Component, title, ...rest}) => (
+const WrappedRoute = ({component: Component, title, html, ...rest}) => (
   <Route {...rest} render={props => (
     <div className="container-fluid">
       <section id="title">
         <div className="container-fluid">
-          <h1>{title}</h1>
+          { html 
+            ? <h1 dangerouslySetInnerHTML={{__html: html}}/>
+            : <h1>{title}</h1>
+          }
           <Breadcrumbs
             className="pull-left"
             title={title}

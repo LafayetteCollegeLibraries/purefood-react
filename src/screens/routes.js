@@ -10,7 +10,7 @@ import Copyright from './Copyright'
 export default [
   {
     path: '/',
-    title: 'Home',
+    html: '<em>Pure Adulteration</em> Digital Companion Site',
     component: Home,
   },
   {
