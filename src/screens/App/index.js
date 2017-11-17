@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import WrappedRoute from '../../components/WrappedRoute'
 import NavContainer from '../../components/NavContainer'
+import Footer from '../../components/Footer'
 
 import maps from '../../maps'
 import screens from '../routes'
@@ -29,6 +30,8 @@ const App = () => (
         {...routeData}
       />
     ))}
+
+    <Footer />
   </div>
 )
 
