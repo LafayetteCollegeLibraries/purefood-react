@@ -1,7 +1,7 @@
 import React from 'react'
 
 module.exports = () => (
-<footer className="container-fluid">
+<footer className="container-fluid Footer">
   <nav id="footer-navbar" className="navbar navbar-inverse">
     <div className="container-fluid row">
       <ul className="nav navbar-nav col-xs-12 row">

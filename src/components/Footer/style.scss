@@ -1,0 +1,16 @@
+.Footer {
+  &.container-fluid {
+    padding: 0;
+  }
+
+  .navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  
+  .navbar-nav {
+    li {
+      text-align: center;
+    }
+  }
+}
