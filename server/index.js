@@ -44,4 +44,4 @@ app.get('*', function (req, res) {
   res.send(html)
 })
 
-app.listen(8081)
+app.listen(process.env.PORT || 8081)
