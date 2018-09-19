@@ -1,6 +1,6 @@
 {
   "name": "@lafayette-college-libraries/pure-food",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
   "scripts": {
