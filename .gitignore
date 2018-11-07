@@ -6,3 +6,4 @@ build/*
 
 *.map
 !public/css/bootstrap.min.css.map
+server.pid
