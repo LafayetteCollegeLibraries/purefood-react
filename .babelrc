@@ -1,16 +1,16 @@
 {
   "presets": [
-    "es2015",
-    "react",
+    "@babel/preset-env",
+    "@babel/preset-react",
   ],
-  
+
   "plugins": [
-    "transform-object-rest-spread",
+    "@babel/plugin-transform-spread",
     "add-module-exports",
   ],
 
   "ignore": [
     "**/node_modules/**/*",
     "**/*.scss"
-  ]  
+  ]
 }
