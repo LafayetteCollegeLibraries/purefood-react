@@ -6,3 +6,5 @@ build/*
 
 *.map
 !public/css/bootstrap.min.css.map
+tmp
+log
