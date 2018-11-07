@@ -25,12 +25,12 @@ namespace :purefood do
     end
 
     desc 'compiles the application and starts the server'
-    task build_and_start: %w[
+    task build_and_restart: %w[
       purefood:server:build
+      purefood:server:stop
       purefood:server:start
     ]
   end
 end
 
-before 'deploy:symlink:release', 'purefood:server:stop'
-after 'deploy:symlink:release', 'purefood:server:build_and_start'
+after 'deploy:symlink:release', 'purefood:server:build_and_restart'
