@@ -2,18 +2,22 @@ namespace :purefood do
   namespace :server do
     task :stop do
       on roles(:app) do
-        pid_path = shared_path.join('tmp', 'server.pid')
+        within current_path do
+          pid_path = shared_path.join('tmp', 'server.pid')
 
-        if test("[ -f #{pid_path} ]")
-          info '[purefood:server:stop] killing running server'
-          execute :kill, "`cat #{pid_path}`"
+          if test("[ -f #{pid_path} ]")
+            info '[purefood:server:stop] killing running server'
+            execute :kill, "`cat #{pid_path}`"
+          end
         end
       end
     end
 
     task :start do
       on roles(:app) do
-        execute :npm, 'start'
+        within current_path do
+          execute :npm, 'start'
+        end
       end
     end
   end
