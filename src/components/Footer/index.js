@@ -1,6 +1,6 @@
 import React from 'react'
 
-module.exports = () => (
+const Footer = () => (
 <footer className="container-fluid Footer">
   <nav id="footer-navbar" className="navbar navbar-inverse">
     <div className="container-fluid row">
@@ -25,3 +25,5 @@ module.exports = () => (
   </nav>
 </footer>
 )
+
+export default Footer
