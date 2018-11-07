@@ -12,6 +12,8 @@ set :keep_releases, 3
 
 append :linked_dirs, 'tmp'
 
+set :default_env, { 'RAILS_ENV' => 'production' }
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
