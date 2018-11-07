@@ -6,6 +6,12 @@ set :repo_url, 'git@github.com:LafayetteCollegeLibraries/purefood'
 
 set :deploy_to, '/var/www/purefood'
 
+# I don't see a need to keep more than 3 releases, especially
+# with the node_modules dir getting to be around 375mb
+set :keep_releases, 3
+
+append :linked_dirs, 'tmp'
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
