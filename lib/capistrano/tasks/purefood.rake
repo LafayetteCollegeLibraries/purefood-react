@@ -1,4 +1,12 @@
 namespace :purefood do
+  task :build do
+    on roles(:app) do
+      within current_path do
+        execute 'NODE_ENV=production', :npm, :run, :build
+      end
+    end
+  end
+
   namespace :server do
     task :stop do
       on roles(:app) do
@@ -16,17 +24,10 @@ namespace :purefood do
       end
     end
 
-    task :build do
-      on roles(:app) do
-        within current_path do
-          execute :npm, :run, :build
-        end
-      end
-    end
 
     desc 'compiles the application and starts the server'
     task build_and_restart: %w[
-      purefood:server:build
+      purefood:build
       purefood:server:stop
       purefood:server:start
     ]
