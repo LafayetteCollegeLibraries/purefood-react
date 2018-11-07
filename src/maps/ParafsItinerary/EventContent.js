@@ -33,11 +33,11 @@ const EventContent = props => {
     content,
     thumbnail,
     thumbnailPath,
-    
+
     // not used, but pulled anyway as it's not a valid container-prop
     map,
 
-    ...containerProps,
+    ...containerProps
   } = props
 
   const contentHTML = Array.isArray(content) ? content.join('</p><p>') : content
