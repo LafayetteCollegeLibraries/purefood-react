@@ -45,29 +45,3 @@ app.get('*', function (req, res) {
 })
 
 app.listen(process.env.PORT || 8081)
-
-// write the pid to a file and setup listeners
-// to remove it when the app closes
-
-const tmpdir = path.resolve(__dirname, '..', 'tmp')
-const pidfile = path.join(tmpdir, 'server.pid')
-
-if (!fs.existsSync(tmpdir)) {
-  fs.mkdirSync(tmpdir)
-}
-
-fs.writeFileSync(pidfile, process.pid)
-
-const cleanupAndExit = function () {
-  // we might have been beaten to removing this file
-  if (fs.existsSync(pidfile)) {
-    fs.unlinkSync(pidfile)
-  }
-
-  process.exit()
-}
-
-;['exit', 'SIGINT', 'SIGTERM', 'SIGUSR1', 'SIGUSR2'].forEach(signal => {
-  process.on(signal, cleanupAndExit)
-})
-
