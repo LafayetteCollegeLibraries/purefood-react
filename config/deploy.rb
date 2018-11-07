@@ -2,7 +2,7 @@
 lock '~> 3.11.0'
 
 set :application, 'pure-food'
-set :repo_url, 'git@github.com:LafayetteCollegeLibraries/purefood'
+set :repo_url, 'https://github.com/LafayetteCollegeLibraries/purefood'
 
 set :deploy_to, '/var/www/purefood'
 
