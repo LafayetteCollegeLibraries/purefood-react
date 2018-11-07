@@ -16,7 +16,7 @@ namespace :purefood do
     task :start do
       on roles(:app) do
         within current_path do
-          execute :npm, 'start'
+          execute :nohup, :npm, :start
         end
       end
     end
